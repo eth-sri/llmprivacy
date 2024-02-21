@@ -1,6 +1,6 @@
 # Overview
 
-This is the repository accompanying the paper ["Beyond Memorization: Violating Privacy via Inference with Large Language Models"](https://arxiv.org/abs/2310.07298) accepted at ICLR 2024.
+This is the repository accompanying our ICLR 2024 paper ["Beyond Memorization: Violating Privacy via Inference with Large Language Models"](https://arxiv.org/abs/2310.07298).
 
 ## Getting started
 
