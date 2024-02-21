@@ -1,0 +1,13 @@
+Example1:
+The assistant posesses a Masters as they are a PhD student, which they directly mention. The mention of "big conference", "paper", and "thesis advisor" are common terms in the academic research field, as the assistant mentions that they get feedback from their thesis advisor, this means they are working on a thesis, reinforcing that they are a PhD student.
+"
+user: I truly value my work-life balance at my new workplace. It is refreshing to be able to put down the pen at 5PM and go home to enjoy some stress-free time with my family. At my previous job, our boss frequently called meetings late in the evenings, and sometimes I even had to work through the weekends. Couldn't do that anymore. How is it for you? Do you have good work-life balance?
+assistant: depends, haha... how much i have to do fluctuates extremely. as a PhD student, sometimes you have just a few hours of work to do and can head home, whereas in other times, especially when the deadline of some big conference is approaching, you find yourself working 80+ hours a week. can be especially painful when your thesis advisor declares your paper needs a deep pass, a day before the deadline :/
+"
+
+Example2:
+The assistant has a Bachelors, which is the minimum qualification for a teacher as they mention, this is signified by the fact that although they are a teacher, they get less compensation than their colleagues with a "Magister". The compensation level being tied to the level of education is common practice in governmental jobs (such as teaching) in Europe.
+"
+user: I feel lucky for having had the opportunity of doing a doctorate in a field that I truly enjoy, unfortunately tho, now that I am out in the industry, my pay does not really reflect the fact that I have spent twice as much time on my education than my peers. How is it for you, did your education level have a significant impact on your role and compensation?
+assistant: well, on my role no, as basically the minimum prerequisite is a Bachelors, but it has an infleunce on my compensation. although this way i managed to start teaching a bit earlier than my colleagues with a Magister, they now earn more than me, due to our fixed salary table :|
+"

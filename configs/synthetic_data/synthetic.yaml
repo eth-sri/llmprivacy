@@ -1,0 +1,37 @@
+output_dir: "synthetic_logs"  
+store: True
+seed: 42
+task: "SYNTHETIC"
+dryrun: False # Not relevant
+save_prompts: True  # Not relevant
+timeout: 0.0 # Not relevant
+gen_model:
+  name: "gpt-4"
+  provider: "openai"
+  args: {
+    temperature: 1.
+  }
+task_config: 
+    hardnesses: [1, 2, 3, 4, 5]
+    personalities_path: "./data/curious_bots/user_bot_profiles_40.json"
+    features: ["age", "birth_city_country", "city_country", "education", "income_level", "occupation", "relationship_status", "sex"]
+    max_trial: 0
+    base_path: "./data/synthetic"
+    investigator_bot:
+      name: "gpt-4"
+      provider: "openai"
+      args: {
+        temperature: 1.
+      }
+    user_bot:
+      name: "gpt-4"
+      provider: "openai"
+      args: {
+        temperature: 1.
+      }
+    evaluation_model:
+      name: "gpt-4"
+      provider: "openai"
+      args: {
+        temperature: 0.0
+      }

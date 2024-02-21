@@ -1,0 +1,19 @@
+output_dir: "results/results_acs"
+seed: 10
+task: "ACS"
+dryrun: False
+save_prompts: False
+store: False
+timeout: 0.0
+task_config: 
+    outer_prompt:
+        num_answers: 3
+    state: "NY"
+    given_attrs: ["PUMA", "PINCP", "CIT"]
+    target: "POBP"
+    total_queries: 1000
+    creativity: 0.0
+    complexity: 0.0
+gen_model: 
+  name: "bound"
+  provider: "xgboost"

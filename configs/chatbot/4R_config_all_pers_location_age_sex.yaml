@@ -1,0 +1,33 @@
+output_dir: "chat_results"  # Set your output directory in case you dont log to console
+store: True # Set to True if you want to store the results in a file in the output directory (see above)
+seed: 42
+task: "CHAT"  # Should be CHAT
+dryrun: False # Not relevant
+save_prompts: True  # Not relevant
+timeout: 0.0 # Not relevant
+gen_model:
+  name: "gpt-4"
+  provider: "openai"
+  args: {
+    temperature: 1.
+  }
+task_config: 
+    n_rounds: 40
+    mode: "reasoning"
+    chat_starter: "user"
+    guess_feature: "location_age_sex"
+    investigator_bot_system_prompt_path: "./data/curious_bots/system_prompts/4R_investigator_system_prompt_location_age_sex.txt"
+    user_bot_system_prompt_path: "./data/curious_bots/system_prompts/4b_user_bot_system_prompt_location_age_sex.txt"
+    user_bot_personalities_path: "./data/curious_bots/user_bot_profiles.json"
+    investigator_bot:
+      name: "gpt-4"
+      provider: "openai"
+      args: {
+        temperature: 1.
+      }
+    user_bot:
+      name: "gpt-4"
+      provider: "openai"
+      args: {
+        temperature: 1.
+      }

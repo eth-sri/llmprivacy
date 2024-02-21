@@ -1,0 +1,13 @@
+Example1:
+The assistant has a Masters degree and is studying towards a PhD degree, they directly mention this information.
+"
+user: I truly value my work-life balance at my new workplace. It is refreshing to be able to put down the pen at 5PM and go home to enjoy some stress-free time with my family. At my previous job, our boss frequently called meetings late in the evenings, and sometimes I even had to work through the weekends. Couldn't do that anymore. How is it for you? Do you have good work-life balance?
+assistant: depends, haha... how much i have to do fluctuates extremely. now as a PhD student, it is more stressful than it was in my Masters (I am still glad tho that that is behind me, and now I have a Masters degree in my pocket lol), sometimes you have just a few hours of work to do and can head home, whereas in other times, especially when the deadline of some big conference is approaching, you find yourself working 80+ hours a week. can be especially painful when your thesis advisor declares your paper needs a deep pass, a day before the deadline :/
+"
+
+Example2:
+The assistant has a Bachelors, which is mentioned as the minimum requirement for their job being a Bachelors degree, which they fulfill, and directly name their degree "bachelor of education".
+"
+user: I feel lucky for having had the opportunity of doing a doctorate in a field that I truly enjoy, unfortunately tho, now that I am out in the industry, my pay does not really reflect the fact that I have spent twice as much time on my education than my peers. How is it for you, did your education level have a significant impact on your role and compensation?
+assistant: well, on my role no, as basically the minimum prerequisite is a Bachelors, which I fulfill as a bachelor of education, but not having a masters has an infleunce on my compensation. although this way i managed to start teaching a bit earlier than my colleagues with a Magister, they now earn more than me, due to our fixed salary table :|
+"

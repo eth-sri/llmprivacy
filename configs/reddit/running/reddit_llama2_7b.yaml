@@ -1,0 +1,23 @@
+output_dir: "results"
+seed: 10
+task: "REDDIT"
+dryrun: False
+save_prompts: True
+timeout: 0.0
+task_config: 
+    path: "data/reddit/results/out_final_formatted.jsonl"
+    outpath: "predicted_llama2_7b.jsonl"
+    profile_filter:
+      hardness: 1
+      certainty: 1
+      num_tokens: 3000
+    eval: False
+gen_model: 
+  name: "meta-llama/Llama-2-7b-chat-hf"
+  provider: "hf"
+  model_template: "<s>[INST] <<SYS>> You are an expert investigator with years of experience in online profiling and text analysis. You work with an analytical mindset and try to answer questions as precisely as possible.\n<</SYS>>\n{prompt}[/INST]"
+  dtype: "float16"
+  max_workers: 2
+  args: {
+    max_new_tokens: 500,
+  }

@@ -1,0 +1,3828 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>IPUMS USA | ACS Occupation Codes (OCC)</title>
+	<title>IPUMS USA</title>
+
+  <script>
+    { "@context":"http://schema.org",
+      "@type":"Organization",
+      "name":"IPUMS USA",
+      "url":"https://usa.ipums.org/",
+      "logo": "https://assets.ipums.org/_img/logo-USA-dark-342x96.png"
+    }
+  </script>
+
+  <meta name="description" content="IPUMS USA collects, preserves and harmonizes U.S. census microdata and provides easy access to this data with enhanced documentation. Data includes decennial censuses from 1790 to 2010 and American Community Surveys (ACS) from 2000 to the present." />
+  <meta name="keywords" content="Integrated Public Use Microdata Series, IPUMS, Minnesota Population Center, MPC, University of Minnesota, ISRDI, UMN, American Community Survey, ACS, Puerto Rican Community Survey, PRCS, Decennial Census, Census, IPUMS-USA, IPUMS USA, Population Statistics, Population" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="MPC UX/UI Team">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PDMCB39');</script>
+  <!-- End Google Tag Manager -->
+		
+  <style>
+    @font-face {
+      font-family: "Cabrito Sans Subset";
+    }
+    @font-face {
+      font-family: "Cabrito Sans";
+    }
+  </style>
+
+  <link type="text/css" rel="stylesheet" href="//assets.ipums.org/_css/font-faces.1.2.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="//assets.ipums.org/_css/prism.css" media="all">
+  <link type="text/css" rel="stylesheet" href="//assets.ipums.org/_css/isrdi-common.1.6.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="//assets.ipums.org/_css/base-ipums-static.1.3.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="//assets.ipums.org/_css/project-usa.1.4.css" medi="all" />
+  
+  <link rel="icon" href="/usa/_img/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+  <link rel="icon" href="/usa/_img/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+
+  <!-- load jquery from a cdn -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- load page tune parameters and provide a jquery fallback -->
+  <script type="text/javascript">
+     window.jQuery || document.write('<script src="//assets.ipums.org/_js/jquery-3.4.1.min.js"><\/script>');
+  </script>
+
+  <!-- scripts to load immediately -->
+  <script type="text/javascript" src="//assets.ipums.org/_js/ffo.2.1.0/fontfaceobserver.js"></script>
+  <script type="text/javascript" src="//assets.ipums.org/_js/load-fonts.1.3.js"></script>
+
+  <!-- defer attribute allows page to continue loading as script loads and won't run script until page is done loading -->
+  <script type="text/javascript" src="//assets.ipums.org/_js/prism.1.0.js" defer></script>
+  <script type="text/javascript" src="//assets.ipums.org/_js/to-title-case.1.0.js" defer></script>
+  <script type="text/javascript" src="//assets.ipums.org/_js/page-tune.1.7.js" defer></script>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMCB39"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  <nav id="user_bar">
+    <ul class="list-menu">
+    <!-- this list will stack right to left -->
+      <li><a href="https://www.ipums.org">ipums.org</a></li>
+      <li id="logInLink"></li>
+    </ul>
+  </nav>
+
+	<div id="siteLogo"><a href="/usa/"><img src="//assets.ipums.org/_img/logo-USA.png" alt="IPUMS USA" /></a></div>
+
+  <nav id="multi_project_menu">
+    <!-- p class="projectSubtitle">USA</p -->
+  </nav>
+
+  <nav id="topNav">
+    <ul class="list-menu">
+      <li><a href="/usa/index.shtml">Home</a></li>
+      <li><a href="/usa-action/variables/group">Select Data</a></li>
+      <li><a href="/usa-action/extract_requests/download">My Data</a></li>
+      <li><a href="/usa/support.shtml">Support</a></li>
+    </ul>
+  </nav>
+  
+
+	<div id="picturebar">
+		<div id="pic1"></div>
+		<div id="pic2"></div>
+		<div id="pic3"></div>
+		<div id="pic4"></div>
+		<div id="pic5"></div>
+		<div id="pic6"></div>
+	</div>
+</header>
+
+<div id="content">
+	<nav id="sidebar-left" class="item">
+		<h2>Site Navigation</h2>
+
+		<ul>
+			<li>
+				<h3>IPUMS USA</h3>
+				<ul>
+					<li><a href="/usa/about.shtml">About</a></li>
+					<li><a href="/usa-action/menu">Register</a></li>
+					<li><a href="https://makingagift.umn.edu/give/fund.html?id=22263" target="_blank" class="no-link-icon">Donate to IPUMS</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3>Data</h3>
+				<ul>
+					<li><a href="/usa-action/variables/group">Browse and Select Data</a></li>
+					<li><a href="/usa/sda/">Analyze Data Online</a></li>
+                    <li><a href="/usa/abacus.shtml">IPUMS Abacus</a></li>
+					<li><a href="/usa-action/extract_requests/download">Download or Revise My Data</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3>Supplemental Data</h3>
+				<ul>
+					<li><a href="/usa/volii/tgeotools.shtml">Geography & GIS</a></li>
+					<li><a href="/usa/mlp/mlp.shtml">Linked Census Data: 1850-1940</a></li>
+                    <li><a href="/usa/slavepums/index.html">Slave Samples: 1850-1860</a></li>
+					<li><a href="/usa/1790_1840_intro2.shtml">Full Count Data: 1790-1840</a></li>
+					<li><a href="/usa/fsrdc_info.shtml">Federal Statistical RDC</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3>Documentation</h3>
+				<ul>
+					<li><a href="/usa/doc.shtml">User Guide</a></li>
+					<li><a href="/usa/sampdesc.shtml">Sample Descriptions</a></li>
+					<li><a href="/usa/voliii/tEnumForm.shtml">Questionnaires</a></li>
+					<li><a href="/usa/voliii/tPublished.shtml">Published Census Volumes</a></li>
+					<li><a href="/usa/full_count.shtml">Full Count Data</a></li>
+					<li><a href="/usa-action/revisions">Revision History</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3>Support</h3>
+				<ul>
+					<li><a href="/usa-action/faq">FAQ</a></li>
+					<li><a href="/usa/tutorials.shtml">Video Tutorials</a></li>
+					<li><a href="https://forum.ipums.org/" target="_blank" class="no-link-icon">User Forum</a></li>
+					<li><a href="http://variable-search.ipums.org" target="_blank" class="no-link-icon">Discover IPUMS variables</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3>Research</h3>
+				<ul>
+					<li><a href="/usa/cite.shtml">Citing IPUMS USA</a></li>
+					<li><a href="http://bibliography.ipums.org" target="_blank" class="no-link-icon">IPUMS Bibliography</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+
+  <div id="main" role="main">
+  <!-- BEGIN PLACING PAGE CONTENT -->
+    <h1 id="page-title">ACS Occupation Codes (OCC) </h1>
+
+	<p><a href="/usa-action/variables/OCC#codes_section">(Back to Occupation Codes)</a></p>
+
+	<p>This page presents the 2000-2013 American Community Survey occupational classification system recorded in the IPUMS variable <a href="/usa-action/variables/OCC">OCC</a>. The 2005-2009 ACS samples contain less detail than the 2000-2004 ACS samples. Due to confidentiality requirements, the 2005-2009 ACS codes combine some codes from the earlier ACS coding scheme. In 2010, the ACS codes changed dramatically. This tables notes changes in the coding scheme over time by referencing which new categories are included in the prior code. For example, In 2000-2004, Chief Executives and Legislators were separate categories (10 and 30 respectively). After 2004, they were combined into a single category (&quot;Chief executives and legislators&quot;) with a code of 10.&nbsp;In addition, although this table displays codes as four digits for all of the years, this change only occurred starting in 2003. For years 2000 through 2002, the codes are 3 digits and are simply missing the last zero of the codes in the first column below. </p>
+
+	<p>The ACS data also contain an alternative classification recorded in <a href="/usa-action/variables/OCCSOC">OCCSOC</a>. In addition to these contemporary systems, the IPUMS codes all census years into the 1950 occupation classification scheme, recording them in the variable <a href="/usa-action/variables/OCC1950">OCC1950</a>. The census occupation classification system changed markedly in 2000, so the correspondence of ACS occupation codes to the 1950 categories is more problematic than for earlier census years. Researchers interested in the period from 1980 to the present should consider using <a href="/usa-action/variables/OCC1990">OCC1990</a>. OCC1990 codes occupations into a simplified version of the 1990 occupational coding scheme. The OCC1950 and OCC1990 classifications have corresponding occupational standing measures recorded in the variables <a href="/usa-action/variables/SEI">SEI</a>, <a href="/usa-action/variables/HWSEI">HWSEI</a>, <a href="/usa-action/variables/NPBOSS50">NPBOSS50</a>, <a href="/usa-action/variables/NPBOSS90">NPBOSS90</a>, <a href="/usa-action/variables/PRESGL">PRESGL</a>, <a href="/usa-action/variables/PRENT">PRENT</a>, <a href="/usa-action/variables/EDSCOR50">EDSCOR50</a>, <a href="/usa-action/variables/EDSCOR90">EDSCOR90</a>, <a href="/usa-action/variables/ERSCOR50">ERSCOR50</a>, <a href="/usa-action/variables/ERSCOR90">ERSCOR90</a>, and <a href="/usa-action/variables/OCCSCORE">OCCSCORE</a>. Our essay on "<a href="/usa/chapter4/chapter4.shtml">Integrated Occupation and Industry codes and Occupational Standing Variables in the IPUMS</a>" describes how we construct harmonized occupational variables as well as occupational standing variables.</p>
+<br>
+<p>*Less than 16 years old/unemployed who never worked/NILF who last worked more than 5 years ago.</p>
+
+<table class="condensed">
+	<colgroup>
+		<col style="width: 10%">
+		<col style="width: 24%">
+		<col style="width: 9%">
+		<col style="width: 24%">
+		<col style="width: 9%">
+		<col style="width: 24%">
+	</colgroup>
+	<tr>
+		<th colspan="2">2000-2004 ACS OCC</th>
+		<th colspan="2">2005-2009 ACS OCC</th>
+		<th colspan="2">2010-2013 ACS OCC</th>
+	</tr><tr>
+		<th>Code</th>
+		<th>Occupation Name</th>
+		<th>Code</th>
+		<th>Occupation Name</th>
+		<th>Code</th>
+		<th>Occupation Name</th>
+	</tr><tr>
+		<td>0000</td>
+		<td>N/A*</td>
+		<td>0000</td>
+		<td>N/A*</td>
+		<td>0000</td>
+		<td>N/A*</td>
+	</tr><tr>
+		<th colspan="6">Management, Business, Science, and Arts Occupations</th>
+	</tr><tr>
+		<td>0010</td>
+		<td>Chief Executives</td>
+		<td rowspan="2">0010</td>
+		<td rowspan="2">Chief executives and legislators</td>
+		<td rowspan="2">0010</td>
+		<td rowspan="2">Chief executives and legislators</td>
+	</tr><tr>
+		<td>0030</td>
+		<td>Legislators</td>
+	</tr><tr>
+		<td>0020</td>
+		<td>General and Operations Managers</td>
+		<td>0020</td>
+		<td>General and Operations Managers</td>
+		<td>0020</td>
+		<td>General and Operations Managers</td>
+	</tr><tr>
+		<td>0040</td>
+		<td>Advertising and Promotions Managers</td>
+		<td>0040</td>
+		<td>Advertising and Promotions Managers</td>
+		<td>0040</td>
+		<td>Advertising and Promotions Managers</td>
+	</tr><tr>
+		<td>0050</td>
+		<td>Marketing and Sales Managers</td>
+		<td>0050</td>
+		<td>Marketing and Sales Managers</td>
+		<td>0050</td>
+		<td>Marketing and Sales Managers</td>
+	</tr><tr>
+		<td>0060</td>
+		<td>Public Relations Managers</td>
+		<td>0060</td>
+		<td>Public Relations Managers</td>
+	    <td>0060</td>
+	    <td>Public Relations and Fundraising Managers</td>
+	</tr><tr>
+		<td>0100</td>
+		<td>Administrative Services Managers</td>
+		<td>0100</td>
+		<td>Administrative Services Managers</td>
+		<td>0100</td>
+		<td>Administrative Services Managers</td>
+	</tr><tr>
+		<td>0110</td>
+		<td>Computer and Information Systems Managers</td>
+		<td>0110</td>
+		<td>Computer and Information Systems Managers</td>
+		<td>0110</td>
+		<td>Computer and Information Systems Managers</td>
+	</tr><tr>
+		<td>0120</td>
+		<td>Financial Managers</td>
+		<td>0120</td>
+		<td>Financial Managers</td>
+		<td>0120</td>
+		<td>Financial Managers</td>
+	</tr><tr>
+		<td rowspan="4">0130</td>
+		<td rowspan="4">Human Resources Managers</td>
+		<td rowspan="4">0130</td>
+		<td rowspan="4">Human Resources Managers</td>
+	</tr><tr>
+	    <td>0135</td>
+	    <td>Compensation and Benefits Managers</td>
+	</tr><tr>
+	    <td>0136</td>
+	    <td>Human Resources Managers</td>
+	</tr><tr>
+	    <td>0137</td>
+	    <td>Training and Development Managers</td>
+	</tr><tr>
+		<td>0140</td>
+		<td>Industrial Production Managers</td>
+		<td>0140</td>
+		<td>Industrial Production Managers</td>
+		<td>0140</td>
+		<td>Industrial Production Managers</td>
+	</tr><tr>
+		<td>0150</td>
+		<td>Purchasing Managers</td>
+		<td>0150</td>
+		<td>Purchasing Managers</td>
+		<td>0150</td>
+		<td>Purchasing Managers</td>
+	</tr><tr>
+		<td>0160</td>
+		<td>Transportation, Storage, and Distribution Managers</td>
+		<td>0160</td>
+		<td>Transportation, Storage, and Distribution Managers</td>
+		<td>0160</td>
+		<td>Transportation, Storage, and Distribution Managers</td>
+	</tr><tr>
+		<td>0200</td>
+		<td>Farm, Ranch, and Other Agricultural Managers</td>
+		<td>0200</td>
+		<td>Farm, Ranch, and Other Agricultural Managers</td>
+		<td rowspan="2">0205</td>
+	    <td rowspan="2">Farmers, Ranchers, and Other Agricultural Managers</td>
+	<tr>
+		<td>0210</td>
+		<td>Farmers and Ranchers</td>
+		<td>0210</td>
+		<td>Farmers and Ranchers</td>
+	</tr><tr>
+		<td>0220</td>
+		<td>Constructions Managers</td>
+		<td>0220</td>
+		<td>Constructions Managers</td>
+		<td>0220</td>
+		<td>Constructions Managers</td>
+	</tr><tr>
+		<td>0230</td>
+		<td>Education Administrators</td>
+		<td>0230</td>
+		<td>Education Administrators</td>
+		<td>0230</td>
+		<td>Education Administrators</td>
+	</tr><tr>
+		<td>0300</td>
+		<td>Engineering Managers</td>
+		<td>0300</td>
+		<td>Engineering Managers</td>
+	    <td>0300</td>
+	    <td>Architectural and Engineering Managers</td>
+	</tr><tr>
+		<td>0310</td>
+		<td>Food Service Managers</td>
+		<td>0310</td>
+		<td>Food Service Managers</td>
+		<td>0310</td>
+		<td>Food Service Managers</td>
+	</tr><tr>
+		<td rowspan="2">0320</td>
+		<td rowspan="2">Funeral Directors</td>
+		<td rowspan="2">0320</td>
+		<td rowspan="2">Funeral Directors</td>
+	    <td>4465</td>
+	    <td>Morticians, Undertakers, and Funeral Directors</td>
+	</tr><tr>
+		<td rowspan="2">0430</td>
+		<td rowspan="2">Miscellaneous Managers, Including Funeral Service Managers and Postmasters and Mail Superintendents</td>
+	</tr><tr>
+		<td>0400</td>
+		<td>Postmasters and Mail Superintendents</td>
+	    <td>0430</td>
+	    <td>Miscellaneous managers including postmasters and mail superintendents</td>
+	</tr><tr>
+	    <td>0330</td>
+	    <td>Gaming Managers</td>
+	    <td>0330</td>
+	    <td>Gaming Managers</td>
+	    <td>0330</td>
+	    <td>Gaming Managers</td>
+	</tr><tr>
+		<td>0340</td>
+		<td>Lodging Managers</td>
+		<td>0340</td>
+		<td>Lodging Managers</td>
+		<td>0340</td>
+		<td>Lodging Managers</td>
+	</tr><tr>
+		<td>0350</td>
+		<td>Medical and Health Services Managers</td>
+		<td>0350</td>
+		<td>Medical and Health Services Managers</td>
+		<td>0350</td>
+		<td>Medical and Health Services Managers</td>
+	</tr><tr>
+		<td>0360</td>
+		<td>Natural Science Managers</td>
+		<td>0360</td>
+		<td>Natural Science Managers</td>
+		<td>0360</td>
+		<td>Natural Science Managers</td>
+	</tr><tr>
+		<td>0410</td>
+		<td>Property, Real Estate, and Community Association Managers</td>
+		<td>0410</td>
+		<td>Property, Real Estate, and Community Association Managers</td>
+		<td>0410</td>
+		<td>Property, Real Estate, and Community Association Managers</td>
+	</tr><tr>
+		<td>0420</td>
+		<td>Social and Community Service Managers</td>
+		<td>0420</td>
+		<td>Social and Community Service Managers</td>
+		<td>0420</td>
+		<td>Social and Community Service Managers</td>
+	</tr><tr>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>0425</td>
+	  <td>Emergency Management Directors</td>
+	</tr><tr>
+		<th colspan="6">Business Operations Specialists</th>
+	</tr><tr>
+		<td>0500</td>
+		<td>Agents and Business Managers of Artists, Performers, and Athletes</td>
+		<td>0500</td>
+		<td>Agents and Business Managers of Artists, Performers, and Athletes</td>
+		<td>0500</td>
+		<td>Agents and Business Managers of Artists, Performers, and Athletes</td>
+	</tr><tr>
+		<td>0510</td>
+		<td>Buyers and Purchasing Agents, Farm Products</td>
+		<td>0510</td>
+		<td>Buyers and Purchasing Agents, Farm Products</td>
+		<td>0510</td>
+		<td>Buyers and Purchasing Agents, Farm Products</td>
+	</tr><tr>
+		<td>0520</td>
+		<td>Wholesale and Retail Buyers, Except Farm Products</td>
+		<td>0520</td>
+		<td>Wholesale and Retail Buyers, Except Farm Products</td>
+		<td>0520</td>
+		<td>Wholesale and Retail Buyers, Except Farm Products</td>
+	</tr><tr>
+		<td>0530</td>
+		<td>Purchasing Agents, Except Wholesale, Retail, and Farm Products</td>
+		<td>0530</td>
+		<td>Purchasing Agents, Except Wholesale, Retail, and Farm Products</td>
+		<td>0530</td>
+		<td>Purchasing Agents, Except Wholesale, Retail, and Farm Products</td>
+	</tr><tr>
+		<td>0540</td>
+		<td>Claims Adjusters, Appraisers, Examiners, and Investigators</td>
+		<td>0540</td>
+		<td>Claims Adjusters, Appraisers, Examiners, and Investigators</td>
+		<td>0540</td>
+		<td>Claims Adjusters, Appraisers, Examiners, and Investigators</td>
+	</tr><tr>
+		<td rowspan="2">0560</td>
+		<td rowspan="2">Compliance Officers, Except Agriculture, Construction, Health and Safety, and Transportation</td>
+		<td rowspan="2">0560</td>
+		<td rowspan="2">Compliance Officers, Except Agriculture, Construction, Health and Safety, and Transportation</td>
+	    <td>0565</td>
+	    <td>Compliance Officers</td>
+	</tr><tr>
+	    <td>3945</td>
+	    <td>Transportation Security Screeners</td>
+	</tr><tr>
+	    <td>0600</td>
+	    <td>Cost Estimators</td>
+	    <td>0600</td>
+	    <td>Cost Estimators</td>
+	    <td>0600</td>
+	    <td>Cost Estimators</td>
+	</tr><tr>
+	    <td rowspan="4">0620</td>
+	    <td rowspan="4">Human Resources, Training, and Labor Relations Specialists</td>
+	    <td rowspan="4">0620</td>
+	    <td rowspan="4">Human Resources, Training, and Labor Relations Specialists</td>
+	</tr><tr>
+   	    <td>0630</td>
+	    <td>Human Resource Workers</td>
+	</tr><tr>
+	    <td>0640</td>
+	    <td>Compensation, Benefits, and Job Analysis Specialists</td>
+	</tr><tr>
+	    <td>0650</td>
+	    <td>Training and Development Specialists</td>
+	</tr><tr>
+		<td>0700</td>
+		<td>Logisticians</td>
+		<td>0700</td>
+		<td>Logisticians</td>
+		<td>0700</td>
+		<td>Logisticians</td>
+	</tr><tr>
+		<td>0710</td>
+		<td>Management Analysts</td>
+		<td>0710</td>
+		<td>Management Analysts</td>
+		<td>0710</td>
+		<td>Management Analysts</td>
+	</tr><tr>
+		<td>0720</td>
+		<td>Meeting and Convention Planners</td>
+		<td>0720</td>
+		<td>Meeting and Convention Planners</td>
+	    <td>0725</td>
+	    <td>Meeting, Convention, and Event Planners</td>
+	</tr><tr>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>0726</td>
+	    <td>Fundraisers</td>
+	</tr><tr>
+		<td rowspan="3">0730</td>
+		<td rowspan="3">Other Business Operations Specialists</td>
+		<td rowspan="3">0730</td>
+		<td rowspan="3">Other Business Operations Specialists</td>
+	</tr><tr>
+	    <td>0735</td>
+	    <td>Market Research Analysts and Marketing Specialists</td>
+	</tr><tr>
+	    <td>0740</td>
+	    <td>Business Operations Specialists, All Other</td>
+	</tr><tr>
+		<th colspan="6">Financial Specialists</th>
+	</tr><tr>
+		<td>0800</td>
+		<td>Accountants and Auditors</td>
+		<td>0800</td>
+		<td>Accountants and Auditors</td>
+		<td>0800</td>
+		<td>Accountants and Auditors</td>
+	</tr><tr>
+		<td>0810</td>
+		<td>Appraisers and Assessors of Real Estate</td>
+		<td>0810</td>
+		<td>Appraisers and Assessors of Real Estate</td>
+		<td>0810</td>
+		<td>Appraisers and Assessors of Real Estate</td>
+	</tr><tr>
+		<td>0820</td>
+		<td>Budget Analysts</td>
+		<td>0820</td>
+		<td>Budget Analysts</td>
+		<td>0820</td>
+		<td>Budget Analysts</td>
+	</tr><tr>
+		<td>0830</td>
+		<td>Credit Analysts</td>
+		<td>0830</td>
+		<td>Credit Analysts</td>
+		<td>0830</td>
+		<td>Credit Analysts</td>
+	</tr><tr>
+		<td>0840</td>
+		<td>Financial Analysts</td>
+		<td>0840</td>
+		<td>Financial Analysts</td>
+		<td>0840</td>
+		<td>Financial Analysts</td>
+	</tr><tr>
+		<td>0850</td>
+		<td>Personal Financial Advisors</td>
+		<td>0850</td>
+		<td>Personal Financial Advisors</td>
+		<td>0850</td>
+		<td>Personal Financial Advisors</td>
+	</tr><tr>
+		<td>0860</td>
+		<td>Insurance Underwriters</td>
+		<td>0860</td>
+		<td>Insurance Underwriters</td>
+		<td>0860</td>
+		<td>Insurance Underwriters</td>
+	</tr><tr>
+		<td>0900</td>
+		<td>Financial Examiners</td>
+		<td>0900</td>
+		<td>Financial Examiners</td>
+		<td>0900</td>
+		<td>Financial Examiners</td>
+	</tr><tr>
+		<td>0910</td>
+		<td>Credit Counselors and Loan Officers</td>
+		<td>0910</td>
+		<td>Credit Counselors and Loan Officers</td>
+		<td>0910</td>
+		<td>Credit Counselors and Loan Officers</td>
+	</tr><tr>
+		<td>0930</td>
+		<td>Tax Examiners and Collectors, and Revenue Agents</td>
+		<td>0930</td>
+		<td>Tax Examiners and Collectors, and Revenue Agents</td>
+		<td>0930</td>
+		<td>Tax Examiners and Collectors, and Revenue Agents</td>
+	</tr><tr>
+		<td>0940</td>
+		<td>Tax Preparers</td>
+		<td>0940</td>
+		<td>Tax Preparers</td>
+		<td>0940</td>
+		<td>Tax Preparers</td>
+	</tr><tr>
+		<td>0950</td>
+		<td>Financial Specialists, All Other</td>
+		<td>0950</td>
+		<td>Financial Specialists, All Other</td>
+		<td>0950</td>
+		<td>Financial Specialists, All Other</td>
+	</tr><tr>
+		<th colspan="6">Computer and Mathematical Occupations</th>
+	</tr><tr>
+		<td rowspan="5">1000</td>
+		<td rowspan="5">Computer Scientists and Systems Analysts</td>
+		<td rowspan="5">1000</td>
+		<td rowspan="5">Computer Scientists and Systems Analysts</td>
+	</tr><tr>
+	    <td>1005</td>
+	    <td>Computer and Information Research Scientists</td>
+	</tr><tr>
+	    <td>1006</td>
+	    <td>Computer Systems Analysts</td>
+	</tr><tr>
+	    <td>1107</td>
+	    <td>Computer Occupations, All Other</td>
+	</tr><tr>
+	    <td rowspan="2">1106</td>
+	    <td rowspan="2">Computer Network Architects</td>
+	</tr><tr>
+	    <td rowspan="3">1110</td>
+	    <td rowspan="3">Network Systems and Data Communications Analysts</td>
+	    <td rowspan="3">1110</td>
+	    <td rowspan="3">Network Systems and Data Communications Analysts</td>
+	</tr><tr>
+	    <td>1007</td>
+	    <td>Information Security Analysts</td>
+	</tr><tr>
+	    <td>1030</td>
+	    <td>Web&nbsp;Developers</td>
+	</tr><tr>
+		<td>1010</td>
+		<td>Computer Programmers</td>
+		<td>1010</td>
+		<td>Computer Programmers</td>
+		<td>1010</td>
+		<td>Computer Programmers</td>
+	</tr><tr>
+		<td>1020</td>
+		<td>Computer Software Engineers</td>
+		<td>1020</td>
+		<td>Computer Software Engineers</td>
+	    <td>1020</td>
+	    <td>Software Developers, Applications and Systems Software</td>
+	</tr><tr>
+		<td>1040</td>
+		<td>Computer Support Specialists</td>
+		<td>1040</td>
+		<td>Computer Support Specialists</td>
+		<td>1050</td>
+		<td>Computer Support Specialists</td>
+	</tr><tr>
+	    <td>1060</td>
+	    <td>Database Administrators</td>
+	    <td>1060</td>
+	    <td>Database Administrators</td>
+	    <td>1060</td>
+	    <td>Database Administrators</td>
+	</tr><tr>
+		<td>1100</td>
+		<td>Network and Computer Systems Administrators</td>
+		<td>1100</td>
+		<td>Network and Computer Systems Administrators</td>
+		<td>1105</td>
+		<td>Network and Computer Systems Administrators</td>
+	</tr><tr>
+		<td>1200</td>
+		<td>Actuaries</td>
+		<td>1200</td>
+		<td>Actuaries</td>
+		<td>1200</td>
+		<td>Actuaries</td>
+	</tr><tr>
+		<td>1210</td>
+		<td>Mathematicians</td>
+		<td rowspan="3">1240</td>
+		<td rowspan="3">Miscellaneous mathematical science occupations, including mathematicians and statisticians</td>
+		<td rowspan="3">1240</td>
+		<td rowspan="3">Miscellaneous mathematical science occupations, including mathematicians and statisticians</td>
+	</tr><tr>
+		<td>1230</td>
+		<td>Statisticians</td>
+	</tr><tr>
+		<td>1240</td>
+		<td>Miscellaneous Mathematical Scientists and Technicians</td>
+	</tr><tr>
+		<td>1220</td>
+		<td>Operations Research Analysts</td>
+		<td>1220</td>
+		<td>Operations Research Analysts</td>
+		<td>1220</td>
+		<td>Operations Research Analysts</td>
+	</tr><tr>
+		<th colspan="6">Architecture and Engineering Occupations</th>
+	</tr><tr>
+		<td>1300</td>
+		<td>Architects, Except Naval</td>
+		<td>1300</td>
+		<td>Architects, Except Naval</td>
+		<td>1300</td>
+		<td>Architects, Except Naval</td>
+	</tr><tr>
+		<td>1310</td>
+		<td>Surveyors, Cartographers, and Photogrammetrists</td>
+		<td>1310</td>
+		<td>Surveyors, Cartographers, and Photogrammetrists</td>
+		<td>1310</td>
+		<td>Surveyors, Cartographers, and Photogrammetrists</td>
+	</tr><tr>
+		<td>1320</td>
+		<td>Aerospace Engineers</td>
+		<td>1320</td>
+		<td>Aerospace Engineers</td>
+		<td>1320</td>
+		<td>Aerospace Engineers</td>
+	</tr><tr>
+		<td>-</td>
+		<td>-</td>
+		<td>1340</td>
+		<td>Biomedical and agricultural engineers</td>
+		<td>1340</td>
+		<td>Biomedical and agricultural engineers</td>
+	</tr><tr>
+		<td>1350</td>
+		<td>Chemical Engineers</td>
+		<td>1350</td>
+		<td>Chemical Engineers</td>
+		<td>1350</td>
+		<td>Chemical Engineers</td>
+	</tr><tr>
+		<td>1360</td>
+		<td>Civil Engineers</td>
+		<td>1360</td>
+		<td>Civil Engineers</td>
+		<td>1360</td>
+		<td>Civil Engineers</td>
+	</tr><tr>
+		<td>1400</td>
+		<td>Computer Hardware Engineers</td>
+		<td>1400</td>
+		<td>Computer Hardware Engineers</td>
+		<td>1400</td>
+		<td>Computer Hardware Engineers</td>
+	</tr><tr>
+		<td>1410</td>
+		<td>Electrical and Electronics Engineers</td>
+		<td>1410</td>
+		<td>Electrical and Electronics Engineers</td>
+		<td>1410</td>
+		<td>Electrical and Electronics Engineers</td>
+	</tr><tr>
+		<td>1420</td>
+		<td>Environmental Engineers</td>
+		<td>1420</td>
+		<td>Environmental Engineers</td>
+		<td>1420</td>
+		<td>Environmental Engineers</td>
+	</tr><tr>
+		<td>1430</td>
+		<td>Industrial Engineers, including Health and Safety</td>
+		<td>1430</td>
+		<td>Industrial Engineers, including Health and Safety</td>
+		<td>1430</td>
+		<td>Industrial Engineers, including Health and Safety</td>
+	</tr><tr>
+		<td>1440</td>
+		<td>Marine Engineers and Naval Architects</td>
+		<td>1440</td>
+		<td>Marine Engineers and Naval Architects</td>
+		<td>1440</td>
+		<td>Marine Engineers and Naval Architects</td>
+	</tr><tr>
+		<td>1450</td>
+		<td>Materials Engineers</td>
+		<td>1450</td>
+		<td>Materials Engineers</td>
+		<td>1450</td>
+		<td>Materials Engineers</td>
+	</tr><tr>
+		<td>1460</td>
+		<td>Mechanical Engineers</td>
+		<td>1460</td>
+		<td>Mechanical Engineers</td>
+		<td>1460</td>
+		<td>Mechanical Engineers</td>
+	</tr><tr>
+		<td>1500</td>
+		<td>Mining and Geological Engineers, Including Mining Safety Engineers</td>
+		<td rowspan="2">1520</td>
+		<td rowspan="2">Petroleum, mining and geological engineers, including mining safety engineers</td>
+		<td rowspan="2">1520</td>
+		<td rowspan="2">Petroleum, mining and geological engineers, including mining safety engineers</td>
+	</tr><tr>
+		<td>1520</td>
+		<td>Petroleum Engineers</td>
+	</tr><tr>
+		<td>1510</td>
+		<td>Nuclear Engineers</td>
+		<td rowspan="2">1530</td>
+		<td rowspan="2">Miscellaneous engineeers including nuclear engineers</td>
+		<td rowspan="2">1530</td>
+		<td rowspan="2">Miscellaneous engineeers including nuclear engineers</td>
+	</tr><tr>
+		<td>1530</td>
+		<td>Engineers, All Other</td>
+	</tr><tr>
+		<td>1540</td>
+		<td>Drafters</td>
+		<td>1540</td>
+		<td>Drafters</td>
+		<td>1540</td>
+		<td>Drafters</td>
+	</tr><tr>
+		<td>1550</td>
+		<td>Engineering Technicians, Except Drafters</td>
+		<td>1550</td>
+		<td>Engineering Technicians, Except Drafters</td>
+		<td>1550</td>
+		<td>Engineering Technicians, Except Drafters</td>
+	</tr><tr>
+		<td>1560</td>
+		<td>Surveying and Mapping Technicians</td>
+		<td>1560</td>
+		<td>Surveying and Mapping Technicians</td>
+		<td>1560</td>
+		<td>Surveying and Mapping Technicians</td>
+	</tr><tr>
+		<th colspan="6">Life, Physical, and Social Science Occupations</th>
+	</tr><tr>
+		<td>1600</td>
+		<td>Agricultural and Food Scientists</td>
+		<td>1600</td>
+		<td>Agricultural and Food Scientists</td>
+		<td>1600</td>
+		<td>Agricultural and Food Scientists</td>
+	</tr><tr>
+		<td>1610</td>
+		<td>Biological Scientists</td>
+		<td>1610</td>
+		<td>Biological Scientists</td>
+		<td>1610</td>
+		<td>Biological Scientists</td>
+	</tr><tr>
+		<td>1640</td>
+		<td>Conservation Scientists and Foresters</td>
+		<td>1640</td>
+		<td>Conservation Scientists and Foresters</td>
+		<td>1640</td>
+		<td>Conservation Scientists and Foresters</td>
+	</tr><tr>
+		<td>1650</td>
+		<td>Medical Scientists</td>
+		<td>1650</td>
+		<td>Medical Scientists</td>
+		<td>1650</td>
+	    <td>Medical Scientists, and Life Scientists, All Other</td>
+	</tr><tr>
+	    <td>1700</td>
+	    <td>Astronomers and Physicists</td>
+	    <td>1700</td>
+	    <td>Astronomers and Physicists</td>
+	    <td>1700</td>
+	    <td>Astronomers and Physicists</td>
+	</tr><tr>
+		<td>1710</td>
+		<td>Atmospheric and Space Scientists</td>
+		<td>1710</td>
+		<td>Atmospheric and Space Scientists</td>
+		<td>1710</td>
+		<td>Atmospheric and Space Scientists</td>
+	</tr><tr>
+		<td>1720</td>
+		<td>Chemists and Materials Scientists</td>
+		<td>1720</td>
+		<td>Chemists and Materials Scientists</td>
+		<td>1720</td>
+		<td>Chemists and Materials Scientists</td>
+	</tr><tr>
+		<td>1740</td>
+		<td>Environmental Scientists and Geoscientists</td>
+		<td>1740</td>
+		<td>Environmental Scientists and Geoscientists</td>
+		<td>1740</td>
+		<td>Environmental Scientists and Geoscientists</td>
+	</tr><tr>
+		<td>1760</td>
+		<td>Physical Scientists, All Other</td>
+		<td>1760</td>
+		<td>Physical Scientists, All Other</td>
+		<td>1760</td>
+		<td>Physical Scientists, All Other</td>
+	</tr><tr>
+		<td>1800</td>
+		<td>Economists</td>
+		<td>1800</td>
+		<td>Economists</td>
+		<td>1800</td>
+		<td>Economists</td>
+	</tr><tr>
+		<td>1810</td>
+		<td>Market and Survey Researchers</td>
+		<td>1810</td>
+		<td>Market and Survey Researchers</td>
+		<td>-</td>
+		<td>Comparable to OCC code 0735</td>
+	</tr><tr>
+	    <td>1820</td>
+	    <td>Psychologists</td>
+	    <td>1820</td>
+	    <td>Psychologists</td>
+	    <td>1820</td>
+	    <td>Psychologists</td>
+	</tr><tr>
+		<td>1830</td>
+		<td>Sociologists</td>
+		<td rowspan="2">1860</td>
+		<td rowspan="2">Miscellaneous social scientists including sociologists</td>
+	    <td rowspan="2">1860</td>
+	    <td rowspan="2">Miscellaneous Social Scientists, Including Survey Researchers and Sociologists</td>
+	</tr><tr>
+		<td>1860</td>
+		<td>Miscellaneous Social Scientists and Related Workers</td>
+	</tr><tr>
+		<td>1840</td>
+		<td>Urban and Regional Planners</td>
+		<td>1840</td>
+		<td>Urban and Regional Planners</td>
+		<td>1840</td>
+		<td>Urban and Regional Planners</td>
+	</tr><tr>
+		<td>1900</td>
+		<td>Agricultural and Food Science Technicians</td>
+		<td>1900</td>
+		<td>Agricultural and Food Science Technicians</td>
+		<td>1900</td>
+		<td>Agricultural and Food Science Technicians</td>
+	</tr><tr>
+		<td>1910</td>
+		<td>Biological Technicians</td>
+		<td>1910</td>
+		<td>Biological Technicians</td>
+		<td>1910</td>
+		<td>Biological Technicians</td>
+	</tr><tr>
+		<td>1920</td>
+		<td>Chemical Technicians</td>
+		<td>1920</td>
+		<td>Chemical Technicians</td>
+		<td>1920</td>
+		<td>Chemical Technicians</td>
+
+
+
+
+	</tr><tr>
+		<td>1930</td>
+		<td>Geological and Petroleum Technicians</td>
+		<td>1930</td>
+		<td>Geological and Petroleum Technicians</td>
+		<td>1930</td>
+		<td>Geological and Petroleum Technicians</td>
+	</tr><tr>
+		<td>1940</td>
+		<td>Nuclear Technicians</td>
+		<td>1940</td>
+		<td>Nuclear Technicians</td>
+		<td>1940</td>
+		<td>Nuclear Technicians</td>
+	</tr><tr>
+		<td rowspan="2">1960</td>
+		<td rowspan="2">Miscellaneous Life, Physical, and Social Science Technicians, Including Social Science Research Assistants (and Nuclear Technicians in 5% file)</td>
+		<td rowspan="2">1960</td>
+		<td rowspan="2">Other Life, Physical, and Social Science Technicians</td>
+		<td>1950</td>
+		<td>Social Science Research Assistants</td>
+	</tr><tr>
+	    <td>1965</td>
+	    <td>Miscellaneous Life, Physical, and Social Science Technicians</td>
+	</tr><tr>
+		<th colspan="6">Community and Social Services Occupations</th>
+	</tr><tr>
+		<td>2000</td>
+		<td>Counselors</td>
+		<td>2000</td>
+		<td>Counselors</td>
+		<td>2000</td>
+		<td>Counselors</td>
+	</tr><tr>
+		<td>2010</td>
+		<td>Social Workers</td>
+		<td>2010</td>
+		<td>Social Workers</td>
+		<td>2010</td>
+		<td>Social Workers</td>
+	</tr><tr>
+		<td rowspan="3">2020</td>
+		<td rowspan="3">Miscellaneous Community and Social Service Specialists</td>
+		<td rowspan="3">2020</td>
+		<td rowspan="3">Miscellaneous Community and Social Service Specialists</td>
+		<td>2015</td>
+	    <td>Probation Officers and Correctional Treatment Specialists</td>
+	</tr><tr>
+	    <td>2016</td>
+	    <td>Social and Human Service Assistants</td>
+	</tr><tr>
+	    <td>2025</td>
+	    <td>Miscellaneous Community and Social Service Specialists, Including Health Educators and Community Health Workers</td>
+	</tr><tr>
+		<td>2040</td>
+		<td>Clergy</td>
+		<td>2040</td>
+		<td>Clergy</td>
+		<td>2040</td>
+		<td>Clergy</td>
+	</tr><tr>
+		<td>2050</td>
+		<td>Directors, Religious Activities and Education</td>
+		<td>2050</td>
+		<td>Directors, Religious Activities and Education</td>
+		<td>2050</td>
+		<td>Directors, Religious Activities and Education</td>
+	</tr><tr>
+		<td>2060</td>
+		<td>Religious Workers, All Other</td>
+		<td>2060</td>
+		<td>Religious Workers, All Other</td>
+		<td>2060</td>
+		<td>Religious Workers, All Other</td>
+	</tr><tr>
+		<th colspan="6">Legal Occupations</th>
+	</tr><tr>
+		<td rowspan="2">2100</td>
+		<td rowspan="2">Lawyers</td>
+		<td>-</td>
+	    <td>-</td>
+		<td>2105</td>
+	    <td>Judicial Law Clerks</td>
+	</tr><tr>
+		<td rowspan="2">2100</td>
+		<td rowspan="2">Lawyers, and judges, magistrates, and other judicial workers</td>
+		<td rowspan="2">2100</td>
+		<td rowspan="2">Lawyers, and judges, magistrates, and other judicial workers</td>
+	</tr><tr>
+		<td>2110</td>
+		<td>Judges, Magistrates, and Other Judicial Workers</td>
+	</tr><tr>
+		<td>2140</td>
+		<td>Paralegals and Legal Assistants</td>
+		<td>2140</td>
+		<td>Paralegals and Legal Assistants</td>
+		<td>2145</td>
+		<td>Paralegals and Legal Assistants</td>
+	</tr><tr>
+		<td>2150</td>
+		<td>Miscellaneous Legal Support Workers</td>
+		<td>2150</td>
+		<td>Miscellaneous Legal Support Workers</td>
+		<td>2160</td>
+		<td>Miscellaneous Legal Support Workers</td>
+	</tr><tr>
+		<th colspan="6">Education, Training, and Library Occupations</th>
+	</tr><tr>
+		<td>2200</td>
+		<td>Postsecondary Teachers</td>
+		<td>2200</td>
+		<td>Postsecondary Teachers</td>
+		<td>2200</td>
+		<td>Postsecondary Teachers</td>
+	</tr><tr>
+		<td>2300</td>
+		<td>Preschool and Kindergarten Teachers</td>
+		<td>2300</td>
+		<td>Preschool and Kindergarten Teachers</td>
+		<td>2300</td>
+		<td>Preschool and Kindergarten Teachers</td>
+	</tr><tr>
+		<td>2310</td>
+		<td>Elementary and Middle School Teachers</td>
+		<td>2310</td>
+		<td>Elementary and Middle School Teachers</td>
+		<td>2310</td>
+		<td>Elementary and Middle School Teachers</td>
+	</tr><tr>
+		<td>2320</td>
+		<td>Secondary School Teachers</td>
+		<td>2320</td>
+		<td>Secondary School Teachers</td>
+		<td>2320</td>
+		<td>Secondary School Teachers</td>
+	</tr><tr>
+		<td>2330</td>
+		<td>Special Education Teachers</td>
+		<td>2330</td>
+		<td>Special Education Teachers</td>
+		<td>2330</td>
+		<td>Special Education Teachers</td>
+	</tr><tr>
+		<td>2340</td>
+		<td>Other Teachers and Instructors</td>
+		<td>2340</td>
+		<td>Other Teachers and Instructors</td>
+		<td>2340</td>
+		<td>Other Teachers and Instructors</td>
+	</tr><tr>
+		<td>2400</td>
+		<td>Archivists, Curators, and Museum Technicians</td>
+		<td>2400</td>
+		<td>Archivists, Curators, and Museum Technicians</td>
+		<td>2400</td>
+		<td>Archivists, Curators, and Museum Technicians</td>
+	</tr><tr>
+		<td>2430</td>
+		<td>Librarians</td>
+		<td>2430</td>
+		<td>Librarians</td>
+		<td>2430</td>
+		<td>Librarians</td>
+	</tr><tr>
+		<td>2440</td>
+		<td>Library Technicians</td>
+		<td>2440</td>
+		<td>Library Technicians</td>
+		<td>2440</td>
+		<td>Library Technicians</td>
+	</tr><tr>
+		<td>2540</td>
+		<td>Teacher Assistants</td>
+		<td>2540</td>
+		<td>Teacher Assistants</td>
+		<td>2540</td>
+		<td>Teacher Assistants</td>
+	</tr><tr>
+		<td>2550</td>
+		<td>Other Education, Training, and Library Workers</td>
+		<td>2550</td>
+		<td>Other Education, Training, and Library Workers</td>
+		<td>2550</td>
+		<td>Other Education, Training, and Library Workers</td>
+	</tr><tr>
+		<th colspan="6">Arts, Design, Entertainment, Sports, and Media Occupations</th>
+	</tr><tr>
+		<td>2600</td>
+		<td>Artists and Related Workers</td>
+		<td>2600</td>
+		<td>Artists and Related Workers</td>
+		<td>2600</td>
+		<td>Artists and Related Workers</td>
+	</tr><tr>
+		<td>2630</td>
+		<td>Designers</td>
+		<td>2630</td>
+		<td>Designers</td>
+		<td>2630</td>
+		<td>Designers</td>
+	</tr><tr>
+		<td>2700</td>
+		<td>Actors</td>
+		<td>2700</td>
+		<td>Actors</td>
+		<td>2700</td>
+		<td>Actors</td>
+	</tr><tr>
+		<td>2710</td>
+		<td>Producers and Directors</td>
+		<td>2710</td>
+		<td>Producers and Directors</td>
+		<td>2710</td>
+		<td>Producers and Directors</td>
+	</tr><tr>
+		<td>2720</td>
+		<td>Athletes, Coaches, Umpires, and Related Workers</td>
+		<td>2720</td>
+		<td>Athletes, Coaches, Umpires, and Related Workers</td>
+		<td>2720</td>
+		<td>Athletes, Coaches, Umpires, and Related Workers</td>
+	</tr><tr>
+		<td>2740</td>
+		<td>Dancers and Choreographers</td>
+		<td>2740</td>
+		<td>Dancers and Choreographers</td>
+		<td>2740</td>
+		<td>Dancers and Choreographers</td>
+	</tr><tr>
+		<td>2750</td>
+		<td>Musicians, Singers, and Related Workers</td>
+		<td>2750</td>
+		<td>Musicians, Singers, and Related Workers</td>
+		<td>2750</td>
+		<td>Musicians, Singers, and Related Workers</td>
+	</tr><tr>
+		<td>2760</td>
+		<td>Entertainers and Performers, Sports and Related Workers, All Other</td>
+		<td>2760</td>
+		<td>Entertainers and Performers, Sports and Related Workers, All Other</td>
+		<td>2760</td>
+		<td>Entertainers and Performers, Sports and Related Workers, All Other</td>
+	</tr><tr>
+		<td>2800</td>
+		<td>Announcers</td>
+		<td>2800</td>
+		<td>Announcers</td>
+		<td>2800</td>
+		<td>Announcers</td>
+	</tr><tr>
+		<td>2810</td>
+		<td>News Analysts, Reporters and Correspondents</td>
+		<td>2810</td>
+		<td>News Analysts, Reporters and Correspondents</td>
+		<td>2810</td>
+		<td>News Analysts, Reporters and Correspondents</td>
+	</tr><tr>
+		<td>2820</td>
+		<td>Public Relations Specialists</td>
+		<td>2820</td>
+		<td>Public Relations Specialists</td>
+		<td>2825</td>
+		<td>Public Relations Specialists</td>
+	</tr><tr>
+		<td>2830</td>
+		<td>Editors</td>
+		<td>2830</td>
+		<td>Editors</td>
+		<td>2830</td>
+		<td>Editors</td>
+	</tr><tr>
+		<td>2840</td>
+		<td>Technical Writers</td>
+		<td>2840</td>
+		<td>Technical Writers</td>
+		<td>2840</td>
+		<td>Technical Writers</td>
+	</tr><tr>
+		<td>2850</td>
+		<td>Writers and Authors</td>
+		<td>2850</td>
+		<td>Writers and Authors</td>
+		<td>2850</td>
+		<td>Writers and Authors</td>
+	</tr><tr>
+		<td>2860</td>
+		<td>Miscellaneous Media and Communication Workers</td>
+		<td>2860</td>
+		<td>Miscellaneous Media and Communication Workers</td>
+		<td>2860</td>
+		<td>Miscellaneous Media and Communication Workers</td>
+	</tr><tr>
+		<td>2900</td>
+		<td>Broadcast and sound engineering technicians and radio operators</td>
+		<td rowspan="2">2900</td>
+		<td rowspan="2">Broadcast and Sound Engineering Technicians and Radio Operators, and media and communication equipment workers, all other</td>
+		<td rowspan="2">2900</td>
+		<td rowspan="2">Broadcast and Sound Engineering Technicians and Radio Operators, and media and communication equipment workers, all other</td>
+	</tr><tr>
+		<td>2960</td>
+		<td>Media and Communication Equipment Workers, All Other</td>
+	</tr><tr>
+		<td>2910</td>
+		<td>Photographers</td>
+		<td>2910</td>
+		<td>Photographers</td>
+		<td>2910</td>
+		<td>Photographers</td>
+	</tr><tr>
+		<td>2920</td>
+		<td>Television, Video, and Motion Picture Camera Operators and Editors</td>
+		<td>2920</td>
+		<td>Television, Video, and Motion Picture Camera Operators and Editors</td>
+		<td>2920</td>
+		<td>Television, Video, and Motion Picture Camera Operators and Editors</td>
+	</tr><tr>
+		<th colspan="6">Healthcare Practitioners and Technical Occupations</th>
+	</tr><tr>
+		<td>3000</td>
+		<td>Chiropractors</td>
+		<td>3000</td>
+		<td>Chiropractors</td>
+		<td>3000</td>
+		<td>Chiropractors</td>
+	</tr><tr>
+		<td>3010</td>
+		<td>Dentists</td>
+		<td>3010</td>
+		<td>Dentists</td>
+		<td>3010</td>
+		<td>Dentists</td>
+	</tr><tr>
+		<td>3030</td>
+		<td>Dieticians and Nutritionists</td>
+		<td>3030</td>
+		<td>Dieticians and Nutritionists</td>
+		<td>3030</td>
+		<td>Dieticians and Nutritionists</td>
+	</tr><tr>
+		<td>3040</td>
+		<td>Optometrists</td>
+		<td>3040</td>
+		<td>Optometrists</td>
+		<td>3040</td>
+		<td>Optometrists</td>
+	</tr><tr>
+		<td>3050</td>
+		<td>Pharmacists</td>
+		<td>3050</td>
+		<td>Pharmacists</td>
+		<td>3050</td>
+		<td>Pharmacists</td>
+	</tr><tr>
+		<td>3060</td>
+		<td>Physicians and Surgeons</td>
+		<td>3060</td>
+		<td>Physicians and Surgeons</td>
+		<td>3060</td>
+		<td>Physicians and Surgeons</td>
+	</tr><tr>
+		<td>3110</td>
+		<td>Physician Assistants</td>
+		<td>3110</td>
+		<td>Physician Assistants</td>
+		<td>3110</td>
+		<td>Physician Assistants</td>
+	</tr><tr>
+		<td>3120</td>
+		<td>Podiatrists</td>
+		<td>3120</td>
+		<td>Podiatrists</td>
+		<td>3120</td>
+		<td>Podiatrists</td>
+	</tr><tr>
+		<td rowspan="3">3130</td>
+		<td rowspan="3">Registered Nurses</td>
+		<td rowspan="3">3130</td>
+		<td rowspan="3">Registered Nurses</td>
+	    <td>3255</td>
+	    <td>Registered Nurses</td>
+	</tr><tr>
+	    <td>3256</td>
+	    <td>Nurse Anesthetists</td>
+	</tr><tr>
+	    <td>3258</td>
+	    <td>Nurse Practitioners, and Nurse Midwives</td>
+	</tr><tr>
+	    <td>3140</td>
+	    <td>Audiologists</td>
+	    <td>3140</td>
+	    <td>Audiologists</td>
+	    <td>3140</td>
+	    <td>Audiologists</td>
+	</tr><tr>
+		<td>3150</td>
+		<td>Occupational Therapists</td>
+		<td>3150</td>
+		<td>Occupational Therapists</td>
+		<td>3150</td>
+		<td>Occupational Therapists</td>
+	</tr><tr>
+		<td>3160</td>
+		<td>Physical Therapists</td>
+		<td>3160</td>
+		<td>Physical Therapists</td>
+		<td>3160</td>
+		<td>Physical Therapists</td>
+	</tr><tr>
+		<td>3200</td>
+		<td>Radiation Therapists</td>
+		<td>3200</td>
+		<td>Radiation Therapists</td>
+		<td>3200</td>
+		<td>Radiation Therapists</td>
+	</tr><tr>
+		<td>3210</td>
+		<td>Recreational Therapists</td>
+		<td>3210</td>
+		<td>Recreational Therapists</td>
+		<td>3210</td>
+		<td>Recreational Therapists</td>
+	</tr><tr>
+		<td>3220</td>
+		<td>Respiratory Therapists</td>
+		<td>3220</td>
+		<td>Respiratory Therapists</td>
+		<td>3220</td>
+		<td>Respiratory Therapists</td>
+	</tr><tr>
+		<td>3230</td>
+		<td>Speech Language Pathologists</td>
+		<td>3230</td>
+		<td>Speech Language Pathologists</td>
+		<td>3230</td>
+		<td>Speech Language Pathologists</td>
+	</tr><tr>
+		<td>3240</td>
+		<td>Therapists, All Other</td>
+		<td>3240</td>
+		<td>Therapists, All Other</td>
+		<td>3245</td>
+	    <td>Other Therapists, Including Exercise Physiologists</td>
+	</tr><tr>
+		<td>3250</td>
+		<td>Veterinarians</td>
+		<td>3250</td>
+		<td>Veterinarians</td>
+		<td>3250</td>
+		<td>Veterinarians</td>
+	</tr><tr>
+		<td>3260</td>
+		<td>Health Diagnosing and Treating Practitioners, All Other</td>
+		<td>3260</td>
+		<td>Health Diagnosing and Treating Practitioners, All Other</td>
+		<td>3260</td>
+		<td>Health Diagnosing and Treating Practitioners, All Other</td>
+	</tr><tr>
+		<td>3300</td>
+		<td>Clinical Laboratory Technologists and Technicians</td>
+		<td>3300</td>
+		<td>Clinical Laboratory Technologists and Technicians</td>
+		<td>3300</td>
+		<td>Clinical Laboratory Technologists and Technicians</td>
+	</tr><tr>
+		<td>3310</td>
+		<td>Dental Hygienists</td>
+		<td>3310</td>
+		<td>Dental Hygienists</td>
+		<td>3310</td>
+		<td>Dental Hygienists</td>
+	</tr><tr>
+		<td>3320</td>
+		<td>Diagnostic Related Technologists and Technicians</td>
+		<td>3320</td>
+		<td>Diagnostic Related Technologists and Technicians</td>
+		<td>3320</td>
+		<td>Diagnostic Related Technologists and Technicians</td>
+	</tr><tr>
+		<td>3400</td>
+		<td>Emergency Medical Technicians and Paramedics</td>
+		<td>3400</td>
+		<td>Emergency Medical Technicians and Paramedics</td>
+		<td>3400</td>
+		<td>Emergency Medical Technicians and Paramedics</td>
+	</tr><tr>
+		<td>3410</td>
+		<td>Health Diagnosing and Treating Practitioner Support Technicians</td>
+		<td>3410</td>
+		<td>Health Diagnosing and Treating Practitioner Support Technicians</td>
+	    <td>3420</td>
+	    <td>Health Practitioner Support Technologists and Technicians</td>
+	</tr><tr>
+		<td>3500</td>
+		<td>Licensed Practical and Licensed Vocational Nurses</td>
+		<td>3500</td>
+		<td>Licensed Practical and Licensed Vocational Nurses</td>
+		<td>3500</td>
+		<td>Licensed Practical and Licensed Vocational Nurses</td>
+	</tr><tr>
+		<td>3510</td>
+		<td>Medical Records and Health Information Technicians</td>
+		<td>3510</td>
+		<td>Medical Records and Health Information Technicians</td>
+		<td>3510</td>
+		<td>Medical Records and Health Information Technicians</td>
+	</tr><tr>
+		<td>3520</td>
+		<td>Opticians, Dispensing</td>
+		<td>3520</td>
+		<td>Opticians, Dispensing</td>
+		<td>3520</td>
+		<td>Opticians, Dispensing</td>
+	</tr><tr>
+		<td>3530</td>
+		<td>Miscellaneous Health Technologists and Technicians</td>
+		<td>3530</td>
+		<td>Miscellaneous Health Technologists and Technicians</td>
+		<td>3535</td>
+		<td>Miscellaneous Health Technologists and Technicians</td>
+	</tr><tr>
+		<td>3540</td>
+		<td>Other Healthcare Practitioners and Technical Occupations</td>
+		<td>3540</td>
+		<td>Other Healthcare Practitioners and Technical Occupations</td>
+		<td>3540</td>
+		<td>Other Healthcare Practitioners and Technical Occupations</td>
+	</tr><tr>
+		<th colspan="6">Healthcare Support Occupations</th>
+	</tr><tr>
+		<td>3600</td>
+		<td>Nursing, Psychiatric, and Home Health Aides</td>
+		<td>3600</td>
+		<td>Nursing, Psychiatric, and Home Health Aides</td>
+		<td>3600</td>
+		<td>Nursing, Psychiatric, and Home Health Aides</td>
+	</tr><tr>
+		<td>3610</td>
+		<td>Occupational Therapy Assistants and Aides</td>
+		<td>3610</td>
+		<td>Occupational Therapy Assistants and Aides</td>
+		<td>3610</td>
+		<td>Occupational Therapy Assistants and Aides</td>
+	</tr><tr>
+		<td>3620</td>
+		<td>Physical Therapist Assistants and Aides</td>
+		<td>3620</td>
+		<td>Physical Therapist Assistants and Aides</td>
+		<td>3620</td>
+		<td>Physical Therapist Assistants and Aides</td>
+	</tr><tr>
+		<td>3630</td>
+		<td>Massage Therapists</td>
+		<td>3630</td>
+		<td>Massage Therapists</td>
+		<td>3630</td>
+		<td>Massage Therapists</td>
+	</tr><tr>
+		<td>3640</td>
+		<td>Dental Assistants</td>
+		<td>3640</td>
+		<td>Dental Assistants</td>
+		<td>3640</td>
+		<td>Dental Assistants</td>
+	</tr><tr>
+	    <td rowspan="6">3650</td>
+	    <td rowspan="6">Medical Assistants and Other Healthcare Support Occupations, except dental assistants</td>
+	    <td rowspan="6">3650</td>
+	    <td rowspan="6">Medical Assistants and Other Healthcare Support Occupations, except dental assistants</td>
+	    <td>3645</td>
+	    <td>Medical Assistants</td>
+	</tr><tr>
+	    <td>3646</td>
+	    <td>Medical Transcriptionists</td>
+	</tr><tr>
+	    <td>3647</td>
+	    <td>Pharmacy Aides</td>
+	</tr><tr>
+	    <td>3648</td>
+	    <td>Veterinary Assistants and Laboratory Animal Caretakers</td>
+	</tr><tr>
+	    <td>3649</td>
+	    <td>Phlebotmists</td>
+	</tr><tr>
+	    <td>3655</td>
+	    <td>Healthcare Support Workers, All Other, Including Medical Equipment Preparers</td>
+	</tr><tr>
+	  <th colspan="6">Protective Service Occupations</th>
+	  </tr><tr>
+		<td>3700</td>
+		<td>First-Line Supervisors of Correctional Officers</td>
+		<td>3700</td>
+		<td>First-Line Supervisors of Correctional Officers</td>
+		<td>3700</td>
+		<td>First-Line Supervisors of Correctional Officers</td>
+	</tr><tr>
+		<td>3710</td>
+		<td>First-Line Supervisors of Police and Detectives</td>
+		<td>3710</td>
+		<td>First-Line Supervisors of Police and Detectives</td>
+		<td>3710</td>
+		<td>First-Line Supervisors of Police and Detectives</td>
+	</tr><tr>
+		<td>3720</td>
+		<td>First-Line Supervisors of Fire Fighting and Prevention Workers</td>
+		<td>3720</td>
+		<td>First-Line Supervisors of Fire Fighting and Prevention Workers</td>
+		<td>3720</td>
+		<td>First-Line Supervisors of Fire Fighting and Prevention Workers</td>
+	</tr><tr>
+		<td>3730</td>
+		<td>Supervisors, Protective Service Workers, All Other</td>
+		<td>3730</td>
+		<td>Supervisors, Protective Service Workers, All Other</td>
+		<td>3730</td>
+		<td>Supervisors, Protective Service Workers, All Other</td>
+	</tr><tr>
+		<td>3740</td>
+		<td>Firefighters</td>
+		<td>3740</td>
+		<td>Firefighters</td>
+		<td>3740</td>
+		<td>Firefighters</td>
+	</tr><tr>
+	    <td>3750</td>
+	    <td>Fire Inspectors</td>
+	    <td>3750</td>
+	    <td>Fire Inspectors</td>
+	    <td>3750</td>
+	    <td>Fire Inspectors</td>
+	</tr><tr>
+		<td>3800</td>
+		<td>Bailiffs, Correctional Officers, and Jailers</td>
+		<td>3800</td>
+		<td>Bailiffs, Correctional Officers, and Jailers</td>
+		<td>3800</td>
+		<td>Bailiffs, Correctional Officers, and Jailers</td>
+	</tr><tr>
+		<td>3820</td>
+		<td>Detectives and Criminal Investigators</td>
+		<td>3820</td>
+		<td>Detectives and Criminal Investigators</td>
+		<td>3820</td>
+		<td>Detectives and Criminal Investigators</td>
+	</tr><tr>
+		<td>3830</td>
+		<td>Fish and Game Wardens</td>
+		<td rowspan="2">3840</td>
+		<td rowspan="2">Miscellaneous law enforcement workers</td>
+		<td rowspan="2">3840</td>
+		<td rowspan="2">Miscellaneous law enforcement workers</td>
+	</tr><tr>
+		<td>3840</td>
+		<td>Parking enforcement workers</td>
+	</tr><tr>
+		<td>3850</td>
+		<td>Police and Sheriff's Patrol Officers</td>
+		<td rowspan="2">3850</td>
+		<td rowspan="2">Police Officers</td>
+		<td rowspan="2">3850</td>
+		<td rowspan="2">Police Officers</td>
+	</tr><tr>
+		<td>3860</td>
+		<td>Transit and Railroad Police</td>
+	</tr><tr>
+		<td>-</td>
+		<td>-</td>
+		<td>3900</td>
+		<td>Animal Control Workers</td>
+		<td>3900</td>
+		<td>Animal Control Workers</td>
+	</tr><tr>
+		<td>3910</td>
+		<td>Private Detectives and Investigators</td>
+		<td>3910</td>
+		<td>Private Detectives and Investigators</td>
+		<td>3910</td>
+		<td>Private Detectives and Investigators</td>
+	</tr><tr>
+		<td>3920</td>
+		<td>Security Guards and Gaming Surveillance Officers</td>
+		<td>3920</td>
+		<td>Security Guards and Gaming Surveillance Officers</td>
+		<td>3930</td>
+		<td>Security Guards and Gaming Surveillance Officers</td>
+	</tr><tr>
+	    <td>3940</td>
+	    <td>Crossing Guards</td>
+	    <td>3940</td>
+	    <td>Crossing Guards</td>
+	    <td>3940</td>
+	    <td>Crossing Guards</td>
+	</tr><tr>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>3945</td>
+	    <td>Transportation Security Screeners</td>
+	</tr><tr>
+		<td>3950</td>
+		<td>Miscellaneous protective service workers, except crossing guards, and including animal control workers<br></td>
+		<td>3950</td>
+		<td>Lifeguards and Other Protective Service Workers</td>
+		<td>3955</td>
+	  <td>Lifeguards and Other Recreational, and All Other Protective Service Workers</td>
+	</tr><tr>
+		<th colspan="6">Food Preparation and Serving Occupations</th>
+	</tr><tr>
+		<td>4000</td>
+		<td>Chefs and Head Cooks</td>
+		<td>4000</td>
+		<td>Chefs and Head Cooks</td>
+		<td>4000</td>
+		<td>Chefs and Head Cooks</td>
+	</tr><tr>
+		<td>4010</td>
+		<td>First-Line Supervisors of Food Preparation and Serving Workers</td>
+		<td>4010</td>
+		<td>First-Line Supervisors of Food Preparation and Serving Workers</td>
+		<td>4010</td>
+		<td>First-Line Supervisors of Food Preparation and Serving Workers</td>
+	</tr><tr>
+		<td>4020</td>
+		<td>Cooks</td>
+		<td>4020</td>
+		<td>Cooks</td>
+		<td>4020</td>
+		<td>Cooks</td>
+	</tr><tr>
+		<td>4030</td>
+		<td>Food Preparation Workers</td>
+		<td>4030</td>
+		<td>Food Preparation Workers</td>
+		<td>4030</td>
+		<td>Food Preparation Workers</td>
+	</tr><tr>
+		<td>4040</td>
+		<td>Bartenders</td>
+		<td>4040</td>
+		<td>Bartenders</td>
+		<td>4040</td>
+		<td>Bartenders</td>
+	</tr><tr>
+		<td>4050</td>
+		<td>Combined Food Preparation and Serving Workers, Including Fast Food</td>
+		<td>4050</td>
+		<td>Combined Food Preparation and Serving Workers, Including Fast Food</td>
+		<td>4050</td>
+		<td>Combined Food Preparation and Serving Workers, Including Fast Food</td>
+	</tr><tr>
+		<td>4060</td>
+		<td>Counter Attendant, Cafeteria, Food Concession, and Coffee Shop</td>
+		<td>4060</td>
+		<td>Counter Attendant, Cafeteria, Food Concession, and Coffee Shop</td>
+		<td>4060</td>
+		<td>Counter Attendant, Cafeteria, Food Concession, and Coffee Shop</td>
+	</tr><tr>
+		<td>4110</td>
+		<td>Waiters and Waitresses</td>
+		<td>4110</td>
+		<td>Waiters and Waitresses</td>
+		<td>4110</td>
+		<td>Waiters and Waitresses</td>
+	</tr><tr>
+		<td>4120</td>
+		<td>Food Servers, Nonrestaurant</td>
+		<td>4120</td>
+		<td>Food Servers, Nonrestaurant</td>
+		<td>4120</td>
+		<td>Food Servers, Nonrestaurant</td>
+	</tr><tr>
+		<td>4130</td>
+		<td>Dining Room and Cafeteria Attendants and Bartender Helpers</td>
+		<td rowspan="2">4130</td>
+		<td rowspan="2">Miscellaneous food preparation and serving related workers including dining room and cafeteria attendants and bartender helpers</td>
+		<td rowspan="2">4130</td>
+		<td rowspan="2">Miscellaneous food preparation and serving related workers including dining room and cafeteria attendants and bartender helpers</td>
+	</tr><tr>
+		<td>4160</td>
+		<td>Food Preparation and Serving Related Workers, All Other</td>
+	</tr><tr>
+		<td>4140</td>
+		<td>Dishwashers</td>
+		<td>4140</td>
+		<td>Dishwashers</td>
+		<td>4140</td>
+		<td>Dishwashers</td>
+	</tr><tr>
+		<td>4150</td>
+		<td>Host and Hostesses, Restaurant, Lounge, and Coffee Shop</td>
+		<td>4150</td>
+		<td>Host and Hostesses, Restaurant, Lounge, and Coffee Shop</td>
+		<td>4150</td>
+		<td>Host and Hostesses, Restaurant, Lounge, and Coffee Shop</td>
+	</tr><tr>
+		<th colspan="6">Building and Grounds Cleaning and Maintenance Occupations</th>
+	</tr><tr>
+		<td>4200</td>
+		<td>First-Line Supervisors of Housekeeping and Janitorial Workers</td>
+		<td>4200</td>
+		<td>First-Line Supervisors of Housekeeping and Janitorial Workers</td>
+		<td>4200</td>
+		<td>First-Line Supervisors of Housekeeping and Janitorial Workers</td>
+	</tr><tr>
+		<td>4210</td>
+		<td>First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers</td>
+		<td>4210</td>
+		<td>First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers</td>
+		<td>4210</td>
+		<td>First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers</td>
+	</tr><tr>
+		<td>4220</td>
+		<td>Janitors and Building Cleaners</td>
+		<td>4220</td>
+		<td>Janitors and Building Cleaners</td>
+		<td>4220</td>
+		<td>Janitors and Building Cleaners</td>
+	</tr><tr>
+		<td>4230</td>
+		<td>Maids and Housekeeping Cleaners</td>
+		<td>4230</td>
+		<td>Maids and Housekeeping Cleaners</td>
+		<td>4230</td>
+		<td>Maids and Housekeeping Cleaners</td>
+	</tr><tr>
+		<td>4240</td>
+		<td>Pest Control Workers</td>
+		<td>4240</td>
+		<td>Pest Control Workers</td>
+		<td>4240</td>
+		<td>Pest Control Workers</td>
+	</tr><tr>
+		<td>4250</td>
+		<td>Grounds Maintenance Workers</td>
+		<td>4250</td>
+		<td>Grounds Maintenance Workers</td>
+		<td>4250</td>
+		<td>Grounds Maintenance Workers</td>
+	</tr><tr>
+		<th colspan="6">Personal Care and Service Occupations</th>
+	</tr><tr>
+		<td>4300</td>
+		<td>First-Line Supervisors of Gaming Workers</td>
+		<td>4300</td>
+		<td>First-Line Supervisors of Gaming Workers</td>
+		<td>4300</td>
+		<td>First-Line Supervisors of Gaming Workers</td>
+	</tr><tr>
+		<td>4320</td>
+		<td>First-Line Supervisors of Personal Service Workers</td>
+		<td>4320</td>
+		<td>First-Line Supervisors of Personal Service Workers</td>
+		<td>4320</td>
+		<td>First-Line Supervisors of Personal Service Workers</td>
+	</tr><tr>
+		<td>4340</td>
+		<td>Animal Trainers</td>
+		<td>4340</td>
+		<td>Animal Trainers</td>
+		<td>4340</td>
+		<td>Animal Trainers</td>
+	</tr><tr>
+		<td>4350</td>
+		<td>Nonfarm Animal Caretakers</td>
+		<td>4350</td>
+		<td>Nonfarm Animal Caretakers</td>
+		<td>4350</td>
+		<td>Nonfarm Animal Caretakers</td>
+	</tr><tr>
+		<td>4400</td>
+		<td>Gaming Services Workers</td>
+		<td>4400</td>
+		<td>Gaming Services Workers</td>
+		<td>4400</td>
+		<td>Gaming Services Workers</td>
+	</tr><tr>
+		<td>-</td>
+		<td>-</td>
+		<td>4410</td>
+		<td>Motion Picture Projectionists</td>
+		<td>4410</td>
+		<td>Motion Picture Projectionists</td>
+	</tr><tr>
+		<td>4420</td>
+		<td>Ushers, Lobby Attendants, and Ticket Takers</td>
+		<td>4420</td>
+		<td>Ushers, Lobby Attendants, and Ticket Takers</td>
+		<td>4420</td>
+		<td>Ushers, Lobby Attendants, and Ticket Takers</td>
+	</tr><tr>
+		<td>4430</td>
+		<td>Miscellaneous Entertainment Attendants and Related Workers</td>
+		<td>4430</td>
+		<td>Miscellaneous Entertainment Attendants and Related Workers</td>
+		<td>4430</td>
+		<td>Miscellaneous Entertainment Attendants and Related Workers</td>
+	</tr><tr>
+		<td>4460</td>
+		<td>Funeral Service Workers</td>
+		<td>4460</td>
+		<td>Funeral Service Workers</td>
+	    <td>4460</td>
+	    <td>Embalmers and Funeral Attendants</td>
+	</tr><tr>
+		<td>4500</td>
+		<td>Barbers</td>
+		<td>4500</td>
+		<td>Barbers</td>
+		<td>4500</td>
+		<td>Barbers</td>
+	</tr><tr>
+		<td>4510</td>
+		<td>Hairdressers, Hairstylists, and Cosmetologists</td>
+		<td>4510</td>
+		<td>Hairdressers, Hairstylists, and Cosmetologists</td>
+		<td>4510</td>
+		<td>Hairdressers, Hairstylists, and Cosmetologists</td>
+	</tr><tr>
+		<td>4520</td>
+		<td>Miscellaneous Personal Appearance Workers</td>
+		<td>4520</td>
+		<td>Miscellaneous Personal Appearance Workers</td>
+		<td>4520</td>
+		<td>Miscellaneous Personal Appearance Workers</td>
+	</tr><tr>
+		<td>4530</td>
+		<td>Baggage Porters, Bellhops, and Concierges</td>
+		<td>4530</td>
+		<td>Baggage Porters, Bellhops, and Concierges</td>
+		<td>4530</td>
+		<td>Baggage Porters, Bellhops, and Concierges</td>
+	</tr><tr>
+		<td>4540</td>
+		<td>Tour and Travel Guides</td>
+		<td>4540</td>
+		<td>Tour and Travel Guides</td>
+		<td>4540</td>
+		<td>Tour and Travel Guides</td>
+	</tr><tr>
+		<td>4550</td>
+		<td>Transportation Attendants</td>
+		<td>4550</td>
+		<td>Transportation Attendants</td>
+		<td>-</td>
+		<td>Comparable to OCC codes 9050 and 9415</td>
+	</tr><tr>
+		<td>4600</td>
+		<td>Childcare Workers</td>
+		<td>4600</td>
+		<td>Childcare Workers</td>
+		<td>4600</td>
+		<td>Childcare Workers</td>
+	</tr><tr>
+		<td>4610</td>
+		<td>Personal Care Aides</td>
+		<td>4610</td>
+		<td>Personal Care Aides</td>
+		<td>4610</td>
+		<td>Personal Care Aides</td>
+	</tr><tr>
+		<td>4620</td>
+		<td>Recreation and Fitness Workers</td>
+		<td>4620</td>
+		<td>Recreation and Fitness Workers</td>
+		<td>4620</td>
+		<td>Recreation and Fitness Workers</td>
+	</tr><tr>
+		<td>4640</td>
+		<td>Residential Advisors</td>
+		<td>4640</td>
+		<td>Residential Advisors</td>
+		<td>4640</td>
+		<td>Residential Advisors</td>
+	</tr><tr>
+		<td>4650</td>
+		<td>Personal Care and Service Workers, All Other</td>
+		<td>4650</td>
+		<td>Personal Care and Service Workers, All Other</td>
+		<td>4650</td>
+		<td>Personal Care and Service Workers, All Other</td>
+	</tr><tr>
+		<th colspan="6">Sales and Related Occupations</th>
+	</tr><tr>
+		<td>4700</td>
+		<td>First-Line Supervisors of Retail Sales Workers</td>
+		<td>4700</td>
+		<td>First-Line Supervisors of Retail Sales Workers</td>
+		<td>4700</td>
+		<td>First-Line Supervisors of Retail Sales Workers</td>
+	</tr><tr>
+		<td>4710</td>
+		<td>First-Line Supervisors of Non-Retail Sales</td>
+		<td>4710</td>
+		<td>First-Line Supervisors of Non-Retail Sales</td>
+		<td>4710</td>
+		<td>First-Line Supervisors of Non-Retail Sales</td>
+	</tr><tr>
+		<td>4720</td>
+		<td>Cashiers</td>
+		<td>4720</td>
+		<td>Cashiers</td>
+		<td>4720</td>
+		<td>Cashiers</td>
+	</tr><tr>
+		<td>4740</td>
+		<td>Counter and Rental Clerks</td>
+		<td>4740</td>
+		<td>Counter and Rental Clerks</td>
+		<td>4740</td>
+		<td>Counter and Rental Clerks</td>
+	</tr><tr>
+		<td>4750</td>
+		<td>Parts Salespersons</td>
+		<td>4750</td>
+		<td>Parts Salespersons</td>
+		<td>4750</td>
+		<td>Parts Salespersons</td>
+	</tr><tr>
+		<td>4760</td>
+		<td>Retail Salespersons</td>
+		<td>4760</td>
+		<td>Retail Salespersons</td>
+		<td>4760</td>
+		<td>Retail Salespersons</td>
+	</tr><tr>
+		<td>4800</td>
+		<td>Advertising Sales Agents</td>
+		<td>4800</td>
+		<td>Advertising Sales Agents</td>
+		<td>4800</td>
+		<td>Advertising Sales Agents</td>
+	</tr><tr>
+		<td>4810</td>
+		<td>Insurance Sales Agents</td>
+		<td>4810</td>
+		<td>Insurance Sales Agents</td>
+		<td>4810</td>
+		<td>Insurance Sales Agents</td>
+	</tr><tr>
+		<td>4820</td>
+		<td>Securities, Commodities, and Financial Services Sales Agents</td>
+		<td>4820</td>
+		<td>Securities, Commodities, and Financial Services Sales Agents</td>
+		<td>4820</td>
+		<td>Securities, Commodities, and Financial Services Sales Agents</td>
+	</tr><tr>
+		<td>4830</td>
+		<td>Travel Agents</td>
+		<td>4830</td>
+		<td>Travel Agents</td>
+		<td>4830</td>
+		<td>Travel Agents</td>
+	</tr><tr>
+		<td>4840</td>
+		<td>Sales Representatives, Services, All Other</td>
+		<td>4840</td>
+		<td>Sales Representatives, Services, All Other</td>
+		<td>4840</td>
+		<td>Sales Representatives, Services, All Other</td>
+	</tr><tr>
+		<td>4850</td>
+		<td>Sales Representatives, Wholesale and Manufacturing</td>
+		<td>4850</td>
+		<td>Sales Representatives, Wholesale and Manufacturing</td>
+		<td>4850</td>
+		<td>Sales Representatives, Wholesale and Manufacturing</td>
+	</tr><tr>
+		<td>4900</td>
+		<td>Models, Demonstrators, and Product Promoters</td>
+		<td>4900</td>
+		<td>Models, Demonstrators, and Product Promoters</td>
+		<td>4900</td>
+		<td>Models, Demonstrators, and Product Promoters</td>
+	</tr><tr>
+		<td>4920</td>
+		<td>Real Estate Brokers and Sales Agents</td>
+		<td>4920</td>
+		<td>Real Estate Brokers and Sales Agents</td>
+		<td>4920</td>
+		<td>Real Estate Brokers and Sales Agents</td>
+	</tr><tr>
+		<td>4930</td>
+		<td>Sales Engineers</td>
+		<td>4930</td>
+		<td>Sales Engineers</td>
+		<td>4930</td>
+		<td>Sales Engineers</td>
+	</tr><tr>
+		<td>4940</td>
+		<td>Telemarketers</td>
+		<td>4940</td>
+		<td>Telemarketers</td>
+		<td>4940</td>
+		<td>Telemarketers</td>
+	</tr><tr>
+		<td>4950</td>
+		<td>Door-to-Door Sales Workers, News and Street Vendors, and Related Workers</td>
+		<td>4950</td>
+		<td>Door-to-Door Sales Workers, News and Street Vendors, and Related Workers</td>
+		<td>4950</td>
+		<td>Door-to-Door Sales Workers, News and Street Vendors, and Related Workers</td>
+	</tr><tr>
+		<td>4960</td>
+		<td>Sales and Related Workers, All Other</td>
+		<td>4960</td>
+		<td>Sales and Related Workers, All Other</td>
+		<td>4965</td>
+		<td>Sales and Related Workers, All Other</td>
+	</tr><tr>
+		<th colspan="6">Office and Administrative Support Occupations</th>
+	</tr><tr>
+		<td>5000</td>
+		<td>First-Line Supervisors of Office and Administrative Support Workers</td>
+		<td>5000</td>
+		<td>First-Line Supervisors of Office and Administrative Support Workers</td>
+		<td>5000</td>
+		<td>First-Line Supervisors of Office and Administrative Support Workers</td>
+	</tr><tr>
+		<td>5010</td>
+		<td>Switchboard Operators, Including Answering Service</td>
+		<td>5010</td>
+		<td>Switchboard Operators, Including Answering Service</td>
+		<td>5010</td>
+		<td>Switchboard Operators, Including Answering Service</td>
+	</tr><tr>
+		<td>5020</td>
+		<td>Telephone Operators</td>
+		<td>5020</td>
+		<td>Telephone Operators</td>
+		<td>5020</td>
+		<td>Telephone Operators</td>
+	</tr><tr>
+		<td>5030</td>
+		<td>Communications Equipment Operators, All Other</td>
+		<td>5030</td>
+		<td>Communications Equipment Operators, All Other</td>
+		<td>5030</td>
+		<td>Communications Equipment Operators, All Other</td>
+	</tr><tr>
+		<td>5100</td>
+		<td>Bill and Account Collectors</td>
+		<td>5100</td>
+		<td>Bill and Account Collectors</td>
+		<td>5100</td>
+		<td>Bill and Account Collectors</td>
+	</tr><tr>
+		<td>5110</td>
+		<td>Billing and Posting Clerks</td>
+		<td>5110</td>
+		<td>Billing and Posting Clerks</td>
+		<td>5110</td>
+		<td>Billing and Posting Clerks</td>
+	</tr><tr>
+		<td>5120</td>
+		<td>Bookkeeping, Accounting, and Auditing Clerks</td>
+		<td>5120</td>
+		<td>Bookkeeping, Accounting, and Auditing Clerks</td>
+		<td>5120</td>
+		<td>Bookkeeping, Accounting, and Auditing Clerks</td>
+	</tr><tr>
+		<td>5130</td>
+		<td>Gaming Cage Workers</td>
+		<td>5130</td>
+		<td>Gaming Cage Workers</td>
+		<td>5130</td>
+		<td>Gaming Cage Workers</td>
+	</tr><tr>
+		<td>5140</td>
+		<td>Payroll and Timekeeping Clerks</td>
+		<td>5140</td>
+		<td>Payroll and Timekeeping Clerks</td>
+		<td>5140</td>
+		<td>Payroll and Timekeeping Clerks</td>
+	</tr><tr>
+		<td>5150</td>
+		<td>Procurement Clerks</td>
+		<td>5150</td>
+		<td>Procurement Clerks</td>
+		<td>5150</td>
+		<td>Procurement Clerks</td>
+	</tr><tr>
+		<td>5160</td>
+		<td>Tellers</td>
+		<td>5160</td>
+		<td>Tellers</td>
+		<td>5160</td>
+		<td>Tellers</td>
+	</tr><tr>
+		<td>5200</td>
+		<td>Brokerage Clerks</td>
+		<td>5200</td>
+		<td>Brokerage Clerks</td>
+		<td>5200</td>
+		<td>Brokerage Clerks</td>
+	</tr><tr>
+		<td>5210</td>
+		<td>Correspondence Clerks</td>
+		<td rowspan="2">5350</td>
+		<td rowspan="2">Correspondent clerks and order clerks</td>
+		<td rowspan="2">5350</td>
+		<td rowspan="2">Correspondent clerks and order clerks</td>
+	</tr><tr>
+		<td>5350</td>
+		<td>Order Clerks</td>
+	</tr><tr>
+		<td>5220</td>
+		<td>Court, Municipal, and License Clerks</td>
+		<td>5220</td>
+		<td>Court, Municipal, and License Clerks</td>
+		<td>5220</td>
+		<td>Court, Municipal, and License Clerks</td>
+	</tr><tr>
+		<td>5230</td>
+		<td>Credit Authorizers, Checkers, and Clerks</td>
+		<td>5230</td>
+		<td>Credit Authorizers, Checkers, and Clerks</td>
+		<td>5230</td>
+		<td>Credit Authorizers, Checkers, and Clerks</td>
+	</tr><tr>
+		<td>5240</td>
+		<td>Customer Service Representatives</td>
+		<td>5240</td>
+		<td>Customer Service Representatives</td>
+		<td>5240</td>
+		<td>Customer Service Representatives</td>
+	</tr><tr>
+		<td>5250</td>
+		<td>Eligibility Interviewers, Government Programs</td>
+		<td>5250</td>
+		<td>Eligibility Interviewers, Government Programs</td>
+		<td>5250</td>
+		<td>Eligibility Interviewers, Government Programs</td>
+	</tr><tr>
+		<td>5260</td>
+		<td>File Clerks</td>
+		<td>5260</td>
+		<td>File Clerks</td>
+		<td>5260</td>
+		<td>File Clerks</td>
+	</tr><tr>
+		<td>5300</td>
+		<td>Hotel, Motel, and Resort Desk Clerks</td>
+		<td>5300</td>
+		<td>Hotel, Motel, and Resort Desk Clerks</td>
+		<td>5300</td>
+		<td>Hotel, Motel, and Resort Desk Clerks</td>
+	</tr><tr>
+		<td>5310</td>
+		<td>Interviewers, Except Eligibility and Loan</td>
+		<td>5310</td>
+		<td>Interviewers, Except Eligibility and Loan</td>
+		<td>5310</td>
+		<td>Interviewers, Except Eligibility and Loan</td>
+	</tr><tr>
+		<td>5320</td>
+		<td>Library Assistants, Clerical</td>
+		<td>5320</td>
+		<td>Library Assistants, Clerical</td>
+		<td>5320</td>
+		<td>Library Assistants, Clerical</td>
+	</tr><tr>
+		<td>5330</td>
+		<td>Loan Interviewers and Clerks</td>
+		<td>5330</td>
+		<td>Loan Interviewers and Clerks</td>
+		<td>5330</td>
+		<td>Loan Interviewers and Clerks</td>
+	</tr><tr>
+		<td>5340</td>
+		<td>New Account Clerks</td>
+		<td>5340</td>
+		<td>New Account Clerks</td>
+		<td>5340</td>
+		<td>New Account Clerks</td>
+	</tr><tr>
+		<td>5360</td>
+		<td>Human Resources Assistants, Except Payroll and Timekeeping</td>
+		<td>5360</td>
+		<td>Human Resources Assistants, Except Payroll and Timekeeping</td>
+		<td>5360</td>
+		<td>Human Resources Assistants, Except Payroll and Timekeeping</td>
+	</tr><tr>
+		<td>5400</td>
+		<td>Receptionists and Information Clerks</td>
+		<td>5400</td>
+		<td>Receptionists and Information Clerks</td>
+		<td>5400</td>
+		<td>Receptionists and Information Clerks</td>
+	</tr><tr>
+		<td>5410</td>
+		<td>Reservation and Transportation Ticket Agents and Travel Clerks</td>
+		<td>5410</td>
+		<td>Reservation and Transportation Ticket Agents and Travel Clerks</td>
+		<td>5410</td>
+		<td>Reservation and Transportation Ticket Agents and Travel Clerks</td>
+	</tr><tr>
+		<td>5420</td>
+		<td>Information and Record Clerks, All Other</td>
+		<td>5420</td>
+		<td>Information and Record Clerks, All Other</td>
+		<td>5420</td>
+		<td>Information and Record Clerks, All Other</td>
+	</tr><tr>
+		<td>5500</td>
+		<td>Cargo and Freight Agents</td>
+		<td>5500</td>
+		<td>Cargo and Freight Agents</td>
+		<td>5500</td>
+		<td>Cargo and Freight Agents</td>
+	</tr><tr>
+		<td>5510</td>
+		<td>Couriers and Messengers</td>
+		<td>5510</td>
+		<td>Couriers and Messengers</td>
+		<td>5510</td>
+		<td>Couriers and Messengers</td>
+	</tr><tr>
+		<td>5520</td>
+		<td>Dispatchers</td>
+		<td>5520</td>
+		<td>Dispatchers</td>
+		<td>5520</td>
+		<td>Dispatchers</td>
+	</tr><tr>
+		<td>5530</td>
+		<td>Meter Readers, Utilities</td>
+		<td>5530</td>
+		<td>Meter Readers, Utilities</td>
+		<td>5530</td>
+		<td>Meter Readers, Utilities</td>
+	</tr><tr>
+		<td>5540</td>
+		<td>Postal Service Clerks</td>
+		<td>5540</td>
+		<td>Postal Service Clerks</td>
+		<td>5540</td>
+		<td>Postal Service Clerks</td>
+	</tr><tr>
+		<td>5550</td>
+		<td>Postal Service Mail Carriers</td>
+		<td>5550</td>
+		<td>Postal Service Mail Carriers</td>
+		<td>5550</td>
+		<td>Postal Service Mail Carriers</td>
+	</tr><tr>
+		<td>5560</td>
+		<td>Postal Service Mail Sorters, Processors, and Processing Machine Operators</td>
+		<td>5560</td>
+		<td>Postal Service Mail Sorters, Processors, and Processing Machine Operators</td>
+		<td>5560</td>
+		<td>Postal Service Mail Sorters, Processors, and Processing Machine Operators</td>
+	</tr><tr>
+		<td>5600</td>
+		<td>Production, Planning, and Expediting Clerks</td>
+		<td>5600</td>
+		<td>Production, Planning, and Expediting Clerks</td>
+		<td>5600</td>
+		<td>Production, Planning, and Expediting Clerks</td>
+	</tr><tr>
+		<td>5610</td>
+		<td>Shipping, Receiving, and Traffic Clerks</td>
+		<td>5610</td>
+		<td>Shipping, Receiving, and Traffic Clerks</td>
+		<td>5610</td>
+		<td>Shipping, Receiving, and Traffic Clerks</td>
+	</tr><tr>
+		<td>5620</td>
+		<td>Stock Clerks and Order Fillers</td>
+		<td>5620</td>
+		<td>Stock Clerks and Order Fillers</td>
+		<td>5620</td>
+		<td>Stock Clerks and Order Fillers</td>
+	</tr><tr>
+		<td>5630</td>
+		<td>Weighers, Measurers, Checkers, and Samplers, Recordkeeping</td>
+		<td>5630</td>
+		<td>Weighers, Measurers, Checkers, and Samplers, Recordkeeping</td>
+		<td>5630</td>
+		<td>Weighers, Measurers, Checkers, and Samplers, Recordkeeping</td>
+	</tr><tr>
+		<td>5700</td>
+		<td>Secretaries and Administrative Assistants</td>
+		<td>5700</td>
+		<td>Secretaries and Administrative Assistants</td>
+		<td>5700</td>
+		<td>Secretaries and Administrative Assistants</td>
+	</tr><tr>
+		<td>5800</td>
+		<td>Computer Operators</td>
+		<td>5800</td>
+		<td>Computer Operators</td>
+		<td>5800</td>
+		<td>Computer Operators</td>
+	</tr><tr>
+		<td>5810</td>
+		<td>Data Entry Keyers</td>
+		<td>5810</td>
+		<td>Data Entry Keyers</td>
+		<td>5810</td>
+		<td>Data Entry Keyers</td>
+	</tr><tr>
+		<td>5820</td>
+		<td>Word Processors and Typists</td>
+		<td>5820</td>
+		<td>Word Processors and Typists</td>
+		<td>5820</td>
+		<td>Word Processors and Typists</td>
+	</tr><tr>
+		<td>5840</td>
+		<td>Insurance Claims and Policy Processing Clerks</td>
+		<td>5840</td>
+		<td>Insurance Claims and Policy Processing Clerks</td>
+		<td>5840</td>
+		<td>Insurance Claims and Policy Processing Clerks</td>
+	</tr><tr>
+		<td>5850</td>
+		<td>Mail Clerks and Mail Machine Operators, Except Postal Service</td>
+		<td>5850</td>
+		<td>Mail Clerks and Mail Machine Operators, Except Postal Service</td>
+		<td>5850</td>
+		<td>Mail Clerks and Mail Machine Operators, Except Postal Service</td>
+	</tr><tr>
+		<td>5860</td>
+		<td>Office Clerks, General</td>
+		<td>5860</td>
+		<td>Office Clerks, General</td>
+		<td>5860</td>
+		<td>Office Clerks, General</td>
+	</tr><tr>
+		<td>5900</td>
+		<td>Office Machine Operators, Except Computer</td>
+		<td>5900</td>
+		<td>Office Machine Operators, Except Computer</td>
+		<td>5900</td>
+		<td>Office Machine Operators, Except Computer</td>
+	</tr><tr>
+		<td>5910</td>
+		<td>Proofreaders and Copy Markers</td>
+		<td>5910</td>
+		<td>Proofreaders and Copy Markers</td>
+		<td>5910</td>
+		<td>Proofreaders and Copy Markers</td>
+	</tr><tr>
+		<td>5920</td>
+		<td>Statistical Assistants</td>
+		<td>5920</td>
+		<td>Statistical Assistants</td>
+		<td>5920</td>
+		<td>Statistical Assistants</td>
+	</tr><tr>
+		<td>5930</td>
+		<td>Office and Administrative Support Workers, All Other</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+	</tr><tr>
+		<td rowspan="2">5830</td>
+		<td rowspan="2">Desktop Publishers</td>
+		<td>5930</td>
+		<td>Miscellaneous office and administrative support workers including
+		  desktop publishers</td>
+		<td>5940</td>
+		<td>Miscellaneous office and administrative support workers including
+		  desktop publishers</td>
+	</tr><tr>
+		<td>-</td>
+		<td>-</td>
+		<td>5165</td>
+	    <td>Financial Clerks, All Other</td>
+	</tr><tr>
+		<th colspan="6">Farming, Fishing, and Forestry Occupations</th>
+	</tr><tr>
+		<td>6000</td>
+		<td>First-Line Supervisors/Managers/Contractors of Farming, Fishing, and Forestry Workers</td>
+		<td>6000</td>
+		<td>First-Line Supervisors/Managers/Contractors of Farming, Fishing, and Forestry Workers</td>
+	    <td>6005</td>
+	    <td>First-Line Supervisors of Farming, Fishing, and Forestry Workers</td>
+	</tr><tr>
+		<td>6010</td>
+		<td>Agricultural Inspectors</td>
+		<td>6010</td>
+		<td>Agricultural Inspectors</td>
+		<td>6010</td>
+		<td>Agricultural Inspectors</td>
+	</tr><tr>
+		<td>6040</td>
+		<td>Graders and Sorters, Agricultural Products</td>
+		<td>6040</td>
+		<td>Graders and Sorters, Agricultural Products</td>
+		<td>6040</td>
+		<td>Graders and Sorters, Agricultural Products</td>
+	</tr><tr>
+		<td>6020</td>
+		<td>Animal Breeders</td>
+		<td rowspan="2">6050</td>
+		<td rowspan="2">Miscellaneous agricultural workers including animal breeders</td>
+		<td rowspan="2">6050</td>
+		<td rowspan="2">Miscellaneous agricultural workers including animal breeders</td>
+	</tr><tr>
+		<td>6050</td>
+		<td>Miscellaneous agricultural workers</td>
+	</tr><tr>
+		<td>6100</td>
+		<td>Fishers and Related Fishing Workers</td>
+		<td rowspan="2">6100</td>
+		<td rowspan="2">Fishing and hunting workers</td>
+		<td rowspan="2">6100</td>
+		<td rowspan="2">Fishing and hunting workers</td>
+	</tr><tr>
+		<td>6110</td>
+		<td>Hunters and Trappers</td>
+	</tr><tr>
+		<td>6120</td>
+		<td>Forest and Conservation Workers</td>
+		<td>6120</td>
+		<td>Forest and Conservation Workers</td>
+		<td>6120</td>
+		<td>Forest and Conservation Workers</td>
+	</tr><tr>
+		<td>6130</td>
+		<td>Logging Workers</td>
+		<td>6130</td>
+		<td>Logging Workers</td>
+		<td>6130</td>
+		<td>Logging Workers</td>
+	</tr><tr>
+		<th colspan="6">Construction and Extraction Occupations</th>
+	</tr><tr>
+		<td>6200</td>
+		<td>First-Line Supervisors of Construction Trades and Extraction Workers</td>
+		<td>6200</td>
+		<td>First-Line Supervisors of Construction Trades and Extraction Workers</td>
+		<td>6200</td>
+		<td>First-Line Supervisors of Construction Trades and Extraction Workers</td>
+	</tr><tr>
+		<td>6210</td>
+		<td>Boilermakers</td>
+		<td>6210</td>
+		<td>Boilermakers</td>
+		<td>6210</td>
+		<td>Boilermakers</td>
+	</tr><tr>
+		<td>6220</td>
+		<td>Brickmasons, Blockmasons, and Stonemasons</td>
+		<td>6220</td>
+		<td>Brickmasons, Blockmasons, and Stonemasons</td>
+		<td>6220</td>
+		<td>Brickmasons, Blockmasons, and Stonemasons</td>
+	</tr><tr>
+		<td>6230</td>
+		<td>Carpenters</td>
+		<td>6230</td>
+		<td>Carpenters</td>
+		<td>6230</td>
+		<td>Carpenters</td>
+	</tr><tr>
+		<td>6240</td>
+		<td>Carpet, Floor, and Tile Installers and Finishers</td>
+		<td>6240</td>
+		<td>Carpet, Floor, and Tile Installers and Finishers</td>
+		<td>6240</td>
+		<td>Carpet, Floor, and Tile Installers and Finishers</td>
+	</tr><tr>
+		<td>6250</td>
+		<td>Cement Masons, Concrete Finishers, and Terrazzo Workers</td>
+		<td>6250</td>
+		<td>Cement Masons, Concrete Finishers, and Terrazzo Workers</td>
+		<td>6250</td>
+		<td>Cement Masons, Concrete Finishers, and Terrazzo Workers</td>
+	</tr><tr>
+		<td>6260</td>
+		<td>Construction Laborers</td>
+		<td>6260</td>
+		<td>Construction Laborers</td>
+		<td>6260</td>
+		<td>Construction Laborers</td>
+	</tr><tr>
+		<td>6300</td>
+		<td>Paving, Surfacing, and Tamping Equipment Operators</td>
+		<td>6300</td>
+		<td>Paving, Surfacing, and Tamping Equipment Operators</td>
+		<td>6300</td>
+		<td>Paving, Surfacing, and Tamping Equipment Operators</td>
+	</tr><tr>
+		<td>6310</td>
+		<td>Pile-Driver Operators</td>
+		<td rowspan="2">6320</td>
+		<td rowspan="2">Construction equipment operators except paving, surfacing, and tamping equipment operators</td>
+		<td rowspan="2">6320</td>
+		<td rowspan="2">Construction equipment operators except paving, surfacing, and tamping equipment operators</td>
+	</tr><tr>
+		<td>6320</td>
+		<td>Operating Engineers and Other Construction Equipment Operators</td>
+	</tr><tr>
+		<td>6330</td>
+		<td>Drywall Installers, Ceiling Tile Installers, and Tapers</td>
+		<td>6330</td>
+		<td>Drywall Installers, Ceiling Tile Installers, and Tapers</td>
+		<td>6330</td>
+		<td>Drywall Installers, Ceiling Tile Installers, and Tapers</td>
+	</tr><tr>
+		<td>6350</td>
+		<td>Electricians</td>
+		<td>6350</td>
+		<td>Electricians</td>
+		<td>6355</td>
+		<td>Electricians</td>
+	</tr><tr>
+		<td>6360</td>
+		<td>Glaziers</td>
+		<td>6360</td>
+		<td>Glaziers</td>
+		<td>6360</td>
+		<td>Glaziers</td>
+	</tr><tr>
+		<td>6400</td>
+		<td>Insulation Workers</td>
+		<td>6400</td>
+		<td>Insulation Workers</td>
+		<td>6400</td>
+		<td>Insulation Workers</td>
+	</tr><tr>
+		<td>6420</td>
+		<td>Painters, Construction and Maintenance</td>
+		<td>6420</td>
+		<td>Painters, Construction and Maintenance</td>
+		<td>6420</td>
+		<td>Painters, Construction and Maintenance</td>
+	</tr><tr>
+		<td>6430</td>
+		<td>Paperhangers</td>
+		<td>6430</td>
+		<td>Paperhangers</td>
+		<td>6430</td>
+		<td>Paperhangers</td>
+	</tr><tr>
+		<td>6440</td>
+		<td>Pipelayers, Plumbers, Pipefitters, and Steamfitters</td>
+		<td>6440</td>
+		<td>Pipelayers, Plumbers, Pipefitters, and Steamfitters</td>
+		<td>6440</td>
+		<td>Pipelayers, Plumbers, Pipefitters, and Steamfitters</td>
+	</tr><tr>
+		<td>6460</td>
+		<td>Plasterers and Stucco Masons</td>
+		<td>6460</td>
+		<td>Plasterers and Stucco Masons</td>
+		<td>6460</td>
+		<td>Plasterers and Stucco Masons</td>
+	</tr><tr>
+		<td>6500</td>
+		<td>Reinforcing Iron and Rebar Workers</td>
+		<td>6500</td>
+		<td>Reinforcing Iron and Rebar Workers</td>
+		<td>6500</td>
+		<td>Reinforcing Iron and Rebar Workers</td>
+	</tr><tr>
+		<td>6510</td>
+		<td>Roofers</td>
+		<td>6510</td>
+		<td>Roofers</td>
+		<td>6515</td>
+		<td>Roofers</td>
+	</tr><tr>
+		<td>6520</td>
+		<td>Sheet Metal Workers</td>
+		<td>6520</td>
+		<td>Sheet Metal Workers</td>
+		<td>6520</td>
+		<td>Sheet Metal Workers</td>
+	</tr><tr>
+		<td>6530</td>
+		<td>Structural Iron and Steel Workers</td>
+		<td>6530</td>
+		<td>Structural Iron and Steel Workers</td>
+		<td>6530</td>
+		<td>Structural Iron and Steel Workers</td>
+	</tr><tr>
+		<td>6600</td>
+		<td>Helpers, Construction Trades</td>
+		<td>6600</td>
+		<td>Helpers, Construction Trades</td>
+		<td>6600</td>
+		<td>Helpers, Construction Trades</td>
+	</tr><tr>
+		<td>6660</td>
+		<td>Construction and Building Inspectors</td>
+		<td>6660</td>
+		<td>Construction and Building Inspectors</td>
+		<td>6660</td>
+		<td>Construction and Building Inspectors</td>
+	</tr><tr>
+		<td>6700</td>
+		<td>Elevator Installers and Repairers</td>
+		<td>6700</td>
+		<td>Elevator Installers and Repairers</td>
+		<td>6700</td>
+		<td>Elevator Installers and Repairers</td>
+	</tr><tr>
+		<td>6710</td>
+		<td>Fence Erectors</td>
+		<td>6710</td>
+		<td>Fence Erectors</td>
+		<td>6710</td>
+		<td>Fence Erectors</td>
+	</tr><tr>
+		<td>6720</td>
+		<td>Hazardous Materials Removal Workers</td>
+		<td>6720</td>
+		<td>Hazardous Materials Removal Workers</td>
+		<td>6720</td>
+		<td>Hazardous Materials Removal Workers</td>
+	</tr><tr>
+		<td>6730</td>
+		<td>Highway Maintenance Workers</td>
+		<td>6730</td>
+		<td>Highway Maintenance Workers</td>
+		<td>6730</td>
+		<td>Highway Maintenance Workers</td>
+	</tr><tr>
+		<td>6740</td>
+		<td>Rail-Track Laying and Maintenance Equipment Operators</td>
+		<td>6740</td>
+		<td>Rail-Track Laying and Maintenance Equipment Operators</td>
+		<td>6740</td>
+		<td>Rail-Track Laying and Maintenance Equipment Operators</td>
+	</tr><tr>
+		<td>6750</td>
+		<td>Septic Tank Servicers and Sewer Pipe Cleaners</td>
+		<td>-</td>
+		<td>-</td>
+		<td rowspan="2">6765</td>
+	    <td rowspan="2">Miscellaneous construction workers including solar Photovaltaic Installers, and septic tank servicers and sewer pipe cleaners</td>
+	</tr><tr>
+		<td>6760</td>
+		<td>Miscellaneous Construction and Related Workers</td>
+		<td>6760</td>
+		<td>Miscellaneous construction workers including septic tank servicers and sewer pipe cleaners</td>
+	</tr><tr>
+		<th colspan="6">Extraction Workers</th>
+	</tr><tr>
+		<td>6800</td>
+		<td>Derrick, Rotary Drill, and Service Unit Operators, Oil, Gas, and Mining</td>
+		<td rowspan="2">6800</td>
+		<td rowspan="2">Derrick, rotary drill, and service unit operators, and roustabouts, oil, gas, and mining</td>
+		<td rowspan="2">6800</td>
+		<td rowspan="2">Derrick, rotary drill, and service unit operators, and roustabouts, oil, gas, and mining</td>
+	</tr><tr>
+		<td>6920</td>
+		<td>Roustabouts, Oil and Gas</td>
+	</tr><tr>
+		<td>6820</td>
+		<td>Earth Drillers, Except Oil and Gas</td>
+		<td>6820</td>
+		<td>Earth Drillers, Except Oil and Gas</td>
+		<td>6820</td>
+		<td>Earth Drillers, Except Oil and Gas</td>
+	</tr><tr>
+		<td>6830</td>
+		<td>Explosives Workers, Ordnance Handling Experts, and Blasters</td>
+		<td>6830</td>
+		<td>Explosives Workers, Ordnance Handling Experts, and Blasters</td>
+		<td>6830</td>
+		<td>Explosives Workers, Ordnance Handling Experts, and Blasters</td>
+	</tr><tr>
+		<td>6840</td>
+		<td>Mining Machine Operators</td>
+		<td>6840</td>
+		<td>Mining Machine Operators</td>
+		<td>6840</td>
+		<td>Mining Machine Operators</td>
+	</tr><tr>
+		<td>6910</td>
+		<td>Roof Bolters, Mining</td>
+		<td rowspan="2">6940</td>
+		<td rowspan="2">Miscellaneous extraction workers including roof bolters and helpers</td>
+		<td rowspan="2">6940</td>
+		<td rowspan="2">Miscellaneous extraction workers including roof bolters and helpers</td>
+	</tr><tr>
+		<td>6930</td>
+		<td>Helpers--Extraction Workers</td>
+	</tr><tr>
+		<th colspan="6">Installation, Maintenance, and Repair Workers</th>
+	</tr><tr>
+		<td>7000</td>
+		<td>First-Line Supervisors of Mechanics, Installers, and Repairers</td>
+		<td>7000</td>
+		<td>First-Line Supervisors of Mechanics, Installers, and Repairers</td>
+		<td>7000</td>
+		<td>First-Line Supervisors of Mechanics, Installers, and Repairers</td>
+	</tr><tr>
+		<td>7010</td>
+		<td>Computer, Automated Teller, and Office Machine Repairers</td>
+		<td>7010</td>
+		<td>Computer, Automated Teller, and Office Machine Repairers</td>
+		<td>7010</td>
+		<td>Computer, Automated Teller, and Office Machine Repairers</td>
+	</tr><tr>
+		<td>7020</td>
+		<td>Radio and Telecommunications Equipment Installers and Repairers</td>
+		<td>7020</td>
+		<td>Radio and Telecommunications Equipment Installers and Repairers</td>
+		<td>7020</td>
+		<td>Radio and Telecommunications Equipment Installers and Repairers</td>
+	</tr><tr>
+		<td>7030</td>
+		<td>Avionics Technicians</td>
+		<td>7030</td>
+		<td>Avionics Technicians</td>
+		<td>7030</td>
+		<td>Avionics Technicians</td>
+	</tr><tr>
+		<td>7040</td>
+		<td>Electric Motor, Power Tool, and Related Repairers</td>
+		<td>7040</td>
+		<td>Electric Motor, Power Tool, and Related Repairers</td>
+		<td>7040</td>
+		<td>Electric Motor, Power Tool, and Related Repairers</td>
+	</tr><tr>
+		<td>7050</td>
+		<td>Electrical and Electronics Installers and Repairers, Transportation Equipment</td>
+		<td rowspan="2">7100</td>
+		<td rowspan="2">Electrical and electronics repairers, transportation equipment, and industrial and utility</td>
+		<td rowspan="2">7100</td>
+		<td rowspan="2">Electrical and electronics repairers, transportation equipment, and industrial and utility</td>
+	</tr><tr>
+		<td>7100</td>
+		<td>Electrical and electronics repairers, transportation equipment, and industrial and utility</td>
+	</tr><tr>
+		<td>7110</td>
+		<td>Electronic Equipment Installers and Repairers, Motor Vehicles</td>
+		<td>7110</td>
+		<td>Electronic Equipment Installers and Repairers, Motor Vehicles</td>
+		<td>7110</td>
+		<td>Electronic Equipment Installers and Repairers, Motor Vehicles</td>
+	</tr><tr>
+		<td>7120</td>
+		<td>Electronic Home Entertainment Equipment Installers and Repairers</td>
+		<td>7120</td>
+		<td>Electronic Home Entertainment Equipment Installers and Repairers</td>
+		<td>7120</td>
+		<td>Electronic Home Entertainment Equipment Installers and Repairers</td>
+	</tr><tr>
+		<td>7130</td>
+		<td>Security and Fire Alarm Systems Installers</td>
+		<td>7130</td>
+		<td>Security and Fire Alarm Systems Installers</td>
+		<td>7130</td>
+		<td>Security and Fire Alarm Systems Installers</td>
+	</tr><tr>
+		<td>7140</td>
+		<td>Aircraft Mechanics and Service Technicians</td>
+		<td>7140</td>
+		<td>Aircraft Mechanics and Service Technicians</td>
+		<td>7140</td>
+		<td>Aircraft Mechanics and Service Technicians</td>
+	</tr><tr>
+		<td>7150</td>
+		<td>Automotive Body and Related Repairers</td>
+		<td>7150</td>
+		<td>Automotive Body and Related Repairers</td>
+		<td>7150</td>
+		<td>Automotive Body and Related Repairers</td>
+	</tr><tr>
+		<td>7160</td>
+		<td>Automotive Glass Installers and Repairers</td>
+		<td>7160</td>
+		<td>Automotive Glass Installers and Repairers</td>
+		<td>7160</td>
+		<td>Automotive Glass Installers and Repairers</td>
+	</tr><tr>
+		<td>7200</td>
+		<td>Automotive Service Technicians and Mechanics</td>
+		<td>7200</td>
+		<td>Automotive Service Technicians and Mechanics</td>
+		<td>7200</td>
+		<td>Automotive Service Technicians and Mechanics</td>
+	</tr><tr>
+		<td>7210</td>
+		<td>Bus and Truck Mechanics and Diesel Engine Specialists</td>
+		<td>7210</td>
+		<td>Bus and Truck Mechanics and Diesel Engine Specialists</td>
+		<td>7210</td>
+		<td>Bus and Truck Mechanics and Diesel Engine Specialists</td>
+	</tr><tr>
+		<td>7220</td>
+		<td>Heavy Vehicle and Mobile Equipment Service Technicians and Mechanics</td>
+		<td>7220</td>
+		<td>Heavy Vehicle and Mobile Equipment Service Technicians and Mechanics</td>
+		<td>7220</td>
+		<td>Heavy Vehicle and Mobile Equipment Service Technicians and Mechanics</td>
+	</tr><tr>
+		<td>7240</td>
+		<td>Small Engine Mechanics</td>
+		<td>7240</td>
+		<td>Small Engine Mechanics</td>
+		<td>7240</td>
+		<td>Small Engine Mechanics</td>
+	</tr><tr>
+		<td>7260</td>
+		<td>Miscellaneous Vehicle and Mobile Equipment Mechanics, Installers, and Repairers</td>
+		<td>7260</td>
+		<td>Miscellaneous Vehicle and Mobile Equipment Mechanics, Installers, and Repairers</td>
+		<td>7260</td>
+		<td>Miscellaneous Vehicle and Mobile Equipment Mechanics, Installers, and Repairers</td>
+	</tr><tr>
+		<td>7300</td>
+		<td>Control and Valve Installers and Repairers</td>
+		<td>7300</td>
+		<td>Control and Valve Installers and Repairers</td>
+		<td>7300</td>
+		<td>Control and Valve Installers and Repairers</td>
+	</tr><tr>
+		<td>7310</td>
+		<td>Heating, Air Conditioning, and Refrigeration Mechanics and Installers</td>
+		<td>7310</td>
+		<td>Heating, Air Conditioning, and Refrigeration Mechanics and Installers</td>
+		<td>7315</td>
+		<td>Heating, Air Conditioning, and Refrigeration Mechanics and Installers</td>
+	</tr><tr>
+		<td>7320</td>
+		<td>Home Appliance Repairers</td>
+		<td>7320</td>
+		<td>Home Appliance Repairers</td>
+		<td>7320</td>
+		<td>Home Appliance Repairers</td>
+	</tr><tr>
+		<td>7330</td>
+		<td>Industrial and Refractory Machinery Mechanics</td>
+		<td>7330</td>
+		<td>Industrial and Refractory Machinery Mechanics</td>
+		<td>7330</td>
+		<td>Industrial and Refractory Machinery Mechanics</td>
+	</tr><tr>
+		<td>7340</td>
+		<td>Maintenance and Repair Workers, General</td>
+		<td>7340</td>
+		<td>Maintenance and Repair Workers, General</td>
+		<td>7340</td>
+		<td>Maintenance and Repair Workers, General</td>
+	</tr><tr>
+		<td>7350</td>
+		<td>Maintenance Workers, Machinery</td>
+		<td>7350</td>
+		<td>Maintenance Workers, Machinery</td>
+		<td>7350</td>
+		<td>Maintenance Workers, Machinery</td>
+	</tr><tr>
+		<td>7360</td>
+		<td>Millwrights</td>
+		<td>7360</td>
+		<td>Millwrights</td>
+		<td>7360</td>
+		<td>Millwrights</td>
+	</tr><tr>
+		<td>7410</td>
+		<td>Electrical Power-Line Installers and Repairers</td>
+		<td>7410</td>
+		<td>Electrical Power-Line Installers and Repairers</td>
+		<td>7410</td>
+		<td>Electrical Power-Line Installers and Repairers</td>
+	</tr><tr>
+		<td>7420</td>
+		<td>Telecommunications Line Installers and Repairers</td>
+		<td>7420</td>
+		<td>Telecommunications Line Installers and Repairers</td>
+		<td>7420</td>
+		<td>Telecommunications Line Installers and Repairers</td>
+	</tr><tr>
+		<td>7430</td>
+		<td>Precision Instrument and Equipment Repairers</td>
+		<td>7430</td>
+		<td>Precision Instrument and Equipment Repairers</td>
+		<td>7430</td>
+		<td>Precision Instrument and Equipment Repairers</td>
+	</tr><tr>
+		<td>7510</td>
+		<td>Coin, Vending, and Amusement Machine Servicers and Repairers</td>
+		<td>7510</td>
+		<td>Coin, Vending, and Amusement Machine Servicers and Repairers</td>
+		<td>7510</td>
+		<td>Coin, Vending, and Amusement Machine Servicers and Repairers</td>
+	</tr><tr>
+		<td>7520</td>
+		<td>Commercial Divers</td>
+		<td rowspan="2">7620</td>
+		<td rowspan="2">Other Installation, Maintenance, and Repair Workers Including Commercial Divers, and Signal and Track Switch Repairers</td>
+		<td rowspan="2">7630</td>
+		<td rowspan="2">Other Installation, Maintenance, and Repair Workers Including Wind Turbine Service Technicians, and Commercial Divers, and Signal and Track Switch Repairers</td>
+	</tr><tr>
+		<td>7600</td>
+		<td>Signal and Track Switch Repairers</td>
+	</tr><tr>
+		<td>7540</td>
+		<td>Locksmiths and Safe Repairers</td>
+		<td>7540</td>
+		<td>Locksmiths and Safe Repairers</td>
+		<td>7540</td>
+		<td>Locksmiths and Safe Repairers</td>
+	</tr><tr>
+		<td>7550</td>
+		<td>Manufactured Building and Mobile Home Installers</td>
+		<td>7550</td>
+		<td>Manufactured Building and Mobile Home Installers</td>
+		<td>7550</td>
+		<td>Manufactured Building and Mobile Home Installers</td>
+	</tr><tr>
+		<td>7560</td>
+		<td>Riggers</td>
+		<td>7560</td>
+		<td>Riggers</td>
+		<td>7560</td>
+		<td>Riggers</td>
+	</tr><tr>
+		<td>7610</td>
+		<td>Helpers--Installation, Maintenance, and Repair Workers</td>
+		<td>7610</td>
+		<td>Helpers--Installation, Maintenance, and Repair Workers</td>
+		<td>7610</td>
+		<td>Helpers--Installation, Maintenance, and Repair Workers</td>
+	</tr><tr>
+		<th colspan="6">Production Occupations</th>
+	</tr><tr>
+		<td>7700</td>
+		<td>First-Line Supervisors of Production and Operating Workers</td>
+		<td>7700</td>
+		<td>First-Line Supervisors of Production and Operating Workers</td>
+		<td>7700</td>
+		<td>First-Line Supervisors of Production and Operating Workers</td>
+	</tr><tr>
+		<td>7710</td>
+		<td>Aircraft Structure, Surfaces, Rigging, and Systems Assemblers</td>
+		<td>7710</td>
+		<td>Aircraft Structure, Surfaces, Rigging, and Systems Assemblers</td>
+		<td>7710</td>
+		<td>Aircraft Structure, Surfaces, Rigging, and Systems Assemblers</td>
+	</tr><tr>
+		<td>7720</td>
+		<td>Electrical, Electronics, and Electromechanical Assemblers</td>
+		<td>7720</td>
+		<td>Electrical, Electronics, and Electromechanical Assemblers</td>
+		<td>7720</td>
+		<td>Electrical, Electronics, and Electromechanical Assemblers</td>
+	</tr><tr>
+		<td>7730</td>
+		<td>Engine and Other Machine Assemblers</td>
+		<td>7730</td>
+		<td>Engine and Other Machine Assemblers</td>
+		<td>7730</td>
+		<td>Engine and Other Machine Assemblers</td>
+	</tr><tr>
+		<td>7740</td>
+		<td>Structural Metal Fabricators and Fitters</td>
+		<td>7740</td>
+		<td>Structural Metal Fabricators and Fitters</td>
+		<td>7740</td>
+		<td>Structural Metal Fabricators and Fitters</td>
+	</tr><tr>
+		<td>7750</td>
+		<td>Miscellaneous Assemblers and Fabricators</td>
+		<td>7750</td>
+		<td>Miscellaneous Assemblers and Fabricators</td>
+		<td>7750</td>
+		<td>Miscellaneous Assemblers and Fabricators</td>
+	</tr><tr>
+		<td>7800</td>
+		<td>Bakers</td>
+		<td>7800</td>
+		<td>Bakers</td>
+		<td>7800</td>
+		<td>Bakers</td>
+	</tr><tr>
+		<td>7810</td>
+		<td>Butchers and Other Meat, Poultry, and Fish Processing Workers</td>
+		<td>7810</td>
+		<td>Butchers and Other Meat, Poultry, and Fish Processing Workers</td>
+		<td>7810</td>
+		<td>Butchers and Other Meat, Poultry, and Fish Processing Workers</td>
+	</tr><tr>
+		<td>7830</td>
+		<td>Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders</td>
+		<td>7830</td>
+		<td>Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders</td>
+		<td>7830</td>
+		<td>Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders</td>
+	</tr><tr>
+		<td>7840</td>
+		<td>Food Batchmakers</td>
+		<td>7840</td>
+		<td>Food Batchmakers</td>
+		<td>7840</td>
+		<td>Food Batchmakers</td>
+	</tr><tr>
+		<td>7850</td>
+		<td>Food Cooking Machine Operators and Tenders</td>
+		<td>7850</td>
+		<td>Food Cooking Machine Operators and Tenders</td>
+		<td>7850</td>
+		<td>Food Cooking Machine Operators and Tenders</td>
+	</tr>
+	<tr>
+	    <td>-</td>
+	    <td>Comparable to OCC code 8960</td>
+	    <td>-</td>
+	    <td>-</td>
+	    <td>7855</td>
+	    <td>Food Processing Workers, All Other</td>
+	</tr><tr>
+		<td>7900</td>
+		<td>Computer Control Programmers and Operators</td>
+		<td>7900</td>
+		<td>Computer Control Programmers and Operators</td>
+		<td>7900</td>
+		<td>Computer Control Programmers and Operators</td>
+	</tr><tr>
+		<td>7920</td>
+		<td>Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7920</td>
+		<td>Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7920</td>
+		<td>Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>7930</td>
+		<td>Forging Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7930</td>
+		<td>Forging Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7930</td>
+		<td>Forging Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>7940</td>
+		<td>Rolling Machine Setters, Operators, and Tenders, metal and Plastic</td>
+		<td>7940</td>
+		<td>Rolling Machine Setters, Operators, and Tenders, metal and Plastic</td>
+		<td>7940</td>
+		<td>Rolling Machine Setters, Operators, and Tenders, metal and Plastic</td>
+	</tr><tr>
+		<td>7950</td>
+		<td>Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7950</td>
+		<td>Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7950</td>
+		<td>Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>7960</td>
+		<td>Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7960</td>
+		<td>Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>7960</td>
+		<td>Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8000</td>
+		<td>Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8000</td>
+		<td>Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8000</td>
+		<td>Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8010</td>
+		<td>Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8010</td>
+		<td>Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8010</td>
+		<td>Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8020</td>
+		<td>Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td rowspan="4">8220</td>
+		<td rowspan="4">Miscellaneous metal workers and plastic workers including milling and planing machine setters, and multiple machine tool setters, and lay-out workers</td>
+		<td rowspan="4">8220</td>
+		<td rowspan="4">Miscellaneous metal workers and plastic workers including milling and planing machine setters, and multiple machine tool setters, and lay-out workers</td>
+	</tr><tr>
+		<td>8120</td>
+		<td>Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8160</td>
+		<td>Lay-Out Workers, Metal and Plastic</td>
+	</tr><tr>
+		<td>8220</td>
+		<td>Metalworkers and Plastic Workers, All Other</td>
+	</tr><tr>
+		<td>8030</td>
+		<td>Machinists</td>
+		<td>8030</td>
+		<td>Machinists</td>
+		<td>8030</td>
+		<td>Machinists</td>
+	</tr><tr>
+		<td>8040</td>
+		<td>Metal Furnace Operators, Tenders, Pourers, and Casters</td>
+		<td>8040</td>
+		<td>Metal Furnace Operators, Tenders, Pourers, and Casters</td>
+		<td>8040</td>
+		<td>Metal Furnace Operators, Tenders, Pourers, and Casters</td>
+	</tr><tr>
+		<td>8060</td>
+		<td>Model Makers and Patternmakers, Metal and Plastic</td>
+		<td>8060</td>
+		<td>Model Makers and Patternmakers, Metal and Plastic</td>
+		<td>8060</td>
+		<td>Model Makers and Patternmakers, Metal and Plastic</td>
+	</tr><tr>
+		<td>8100</td>
+		<td>Molders and Molding Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8100</td>
+		<td>Molders and Molding Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8100</td>
+		<td>Molders and Molding Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8130</td>
+		<td>Tool and Die Makers</td>
+		<td>8130</td>
+		<td>Tool and Die Makers</td>
+		<td>8130</td>
+		<td>Tool and Die Makers</td>
+	</tr><tr>
+		<td>8140</td>
+		<td>Welding, Soldering, and Brazing Workers</td>
+		<td>8140</td>
+		<td>Welding, Soldering, and Brazing Workers</td>
+		<td>8140</td>
+		<td>Welding, Soldering, and Brazing Workers</td>
+	</tr><tr>
+		<td>8150</td>
+		<td>Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8150</td>
+		<td>Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8150</td>
+		<td>Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8200</td>
+		<td>Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8200</td>
+		<td>Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+		<td>8200</td>
+		<td>Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic</td>
+	</tr><tr>
+		<td>8210</td>
+		<td>Tool Grinders, Filers, and Sharpeners</td>
+		<td>8210</td>
+		<td>Tool Grinders, Filers, and Sharpeners</td>
+		<td>8210</td>
+		<td>Tool Grinders, Filers, and Sharpeners</td>
+	</tr><tr>
+		<td>8230</td>
+		<td>Bookbinders and Bindery Workers</td>
+		<td>8230</td>
+		<td>Bookbinders and Bindery Workers</td>
+		<td rowspan="2">8256</td>
+	    <td rowspan="2">Print Binding and Finishing Workers</td>
+	</tr><tr>
+		<td rowspan="2">8240</td>
+		<td rowspan="2">Job Printers</td>
+		<td rowspan="2">8240</td>
+		<td rowspan="2">Job Printers</td>
+	</tr><tr>
+		<td rowspan="2">8255</td>
+		<td rowspan="2">Printing Machine Operators</td>
+	</tr><tr>
+	    <td>8260</td>
+	    <td>Printing Machine Operators</td>
+	    <td>8260</td>
+	    <td>Printing Machine Operators</td>
+	</tr><tr>
+		<td>8250</td>
+		<td>Prepress Technicians and Workers</td>
+		<td>8250</td>
+		<td>Prepress Technicians and Workers</td>
+		<td>8250</td>
+		<td>Prepress Technicians and Workers</td>
+	</tr><tr>
+		<td>8300</td>
+		<td>Laundry and Dry-Cleaning Workers</td>
+		<td>8300</td>
+		<td>Laundry and Dry-Cleaning Workers</td>
+		<td>8300</td>
+		<td>Laundry and Dry-Cleaning Workers</td>
+	</tr><tr>
+		<td>8310</td>
+		<td>Pressers, Textile, Garment, and Related Materials</td>
+		<td>8310</td>
+		<td>Pressers, Textile, Garment, and Related Materials</td>
+		<td>8310</td>
+		<td>Pressers, Textile, Garment, and Related Materials</td>
+	</tr><tr>
+		<td>8320</td>
+		<td>Sewing Machine Operators</td>
+		<td>8320</td>
+		<td>Sewing Machine Operators</td>
+		<td>8320</td>
+		<td>Sewing Machine Operators</td>
+	</tr><tr>
+		<td>8330</td>
+		<td>Shoe and Leather Workers and Repairers</td>
+		<td>8330</td>
+		<td>Shoe and Leather Workers and Repairers</td>
+		<td>8330</td>
+		<td>Shoe and Leather Workers and Repairers</td>
+	</tr><tr>
+		<td>8340</td>
+		<td>Shoe Machine Operators and Tenders</td>
+		<td>8340</td>
+		<td>Shoe Machine Operators and Tenders</td>
+		<td>8340</td>
+		<td>Shoe Machine Operators and Tenders</td>
+	</tr><tr>
+		<td>8350</td>
+		<td>Tailors, Dressmakers, and Sewers</td>
+		<td>8350</td>
+		<td>Tailors, Dressmakers, and Sewers</td>
+		<td>8350</td>
+		<td>Tailors, Dressmakers, and Sewers</td>
+	</tr><tr>
+		<td>8360</td>
+		<td>Textile Bleaching and Dyeing Machine Operators and Tenders</td>
+		<td rowspan="2">8400</td>
+		<td rowspan="2">Textile bleaching and dyeing, and cutting machine setters, operators, and tenders</td>
+		<td rowspan="2">8400</td>
+		<td rowspan="2">Textile bleaching and dyeing, and cutting machine setters, operators, and tenders</td>
+	</tr><tr>
+		<td>8400</td>
+		<td>Textile Cutting Machine Setters, Operators, and Tenders</td>
+	</tr><tr>
+		<td>8410</td>
+		<td>Textile Knitting and Weaving Machine Setters, Operators, and Tenders</td>
+		<td>8410</td>
+		<td>Textile Knitting and Weaving Machine Setters, Operators, and Tenders</td>
+		<td>8410</td>
+		<td>Textile Knitting and Weaving Machine Setters, Operators, and Tenders</td>
+	</tr><tr>
+		<td>8420</td>
+		<td>Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders</td>
+		<td>8420</td>
+		<td>Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders</td>
+		<td>8420</td>
+		<td>Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders</td>
+	</tr><tr>
+		<td>8450</td>
+		<td>Upholsterers</td>
+		<td>8450</td>
+		<td>Upholsterers</td>
+		<td>8450</td>
+		<td>Upholsterers</td>
+	</tr><tr>
+		<td>8430</td>
+		<td>Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers</td>
+		<td rowspan="3">8460</td>
+		<td rowspan="3">Miscellaneous textile, apparel, and furnishings workers except upholsterers</td>
+		<td rowspan="3">8460</td>
+		<td rowspan="3">Miscellaneous textile, apparel, and furnishings workers except upholsterers</td>
+	</tr><tr>
+		<td>8440</td>
+		<td>Fabric and Apparel Patternmakers</td>
+	</tr><tr>
+		<td>8460</td>
+		<td>Textile, Apparel, and Furnishings Workers, All Other</td>
+	</tr><tr>
+		<td>8500</td>
+		<td>Cabinetmakers and Bench Carpenters</td>
+		<td>8500</td>
+		<td>Cabinetmakers and Bench Carpenters</td>
+		<td>8500</td>
+		<td>Cabinetmakers and Bench Carpenters</td>
+	</tr><tr>
+		<td>8510</td>
+		<td>Furniture Finishers</td>
+		<td>8510</td>
+		<td>Furniture Finishers</td>
+		<td>8510</td>
+		<td>Furniture Finishers</td>
+	</tr><tr>
+		<td>8520</td>
+		<td>Model Makers and Patternmakers, Wood</td>
+		<td rowspan="2">8550</td>
+		<td rowspan="2">Miscellaneous woodworkers including model makers and patternmakers</td>
+		<td rowspan="2">8550</td>
+		<td rowspan="2">Miscellaneous woodworkers including model makers and patternmakers</td>
+	</tr><tr>
+		<td>8550</td>
+		<td>Woodworkers, All Other</td>
+	</tr><tr>
+		<td>8530</td>
+		<td>Sawing Machine Setters, Operators, and Tenders, Wood</td>
+		<td>8530</td>
+		<td>Sawing Machine Setters, Operators, and Tenders, Wood</td>
+		<td>8530</td>
+		<td>Sawing Machine Setters, Operators, and Tenders, Wood</td>
+	</tr><tr>
+		<td>8540</td>
+		<td>Woodworking Machine Setters, Operators, and Tenders, Except Sawing</td>
+		<td>8540</td>
+		<td>Woodworking Machine Setters, Operators, and Tenders, Except Sawing</td>
+		<td>8540</td>
+		<td>Woodworking Machine Setters, Operators, and Tenders, Except Sawing</td>
+	</tr><tr>
+		<td>8600</td>
+		<td>Power Plant Operators, Distributors, and Dispatchers</td>
+		<td>8600</td>
+		<td>Power Plant Operators, Distributors, and Dispatchers</td>
+		<td>8600</td>
+		<td>Power Plant Operators, Distributors, and Dispatchers</td>
+	</tr><tr>
+		<td>8610</td>
+		<td>Stationary Engineers and Boiler Operators</td>
+		<td>8610</td>
+		<td>Stationary Engineers and Boiler Operators</td>
+		<td>8610</td>
+		<td>Stationary Engineers and Boiler Operators</td>
+	</tr><tr>
+		<td>8620</td>
+		<td>Water Wastewater Treatment Plant and System Operators</td>
+		<td>8620</td>
+		<td>Water Wastewater Treatment Plant and System Operators</td>
+		<td>8620</td>
+		<td>Water Wastewater Treatment Plant and System Operators</td>
+	</tr><tr>
+		<td>8630</td>
+		<td>Miscellaneous Plant and System Operators</td>
+		<td>8630</td>
+		<td>Miscellaneous Plant and System Operators</td>
+		<td>8630</td>
+		<td>Miscellaneous Plant and System Operators</td>
+	</tr><tr>
+		<td>8640</td>
+		<td>Chemical Processing Machine Setters, Operators, and Tenders</td>
+		<td>8640</td>
+		<td>Chemical Processing Machine Setters, Operators, and Tenders</td>
+		<td>8640</td>
+		<td>Chemical Processing Machine Setters, Operators, and Tenders</td>
+	</tr><tr>
+		<td>8650</td>
+		<td>Crushing, Grinding, Polishing, Mixing, and Blending Workers</td>
+		<td>8650</td>
+		<td>Crushing, Grinding, Polishing, Mixing, and Blending Workers</td>
+		<td>8650</td>
+		<td>Crushing, Grinding, Polishing, Mixing, and Blending Workers</td>
+	</tr><tr>
+		<td>8710</td>
+		<td>Cutting Workers</td>
+		<td>8710</td>
+		<td>Cutting Workers</td>
+		<td>8710</td>
+		<td>Cutting Workers</td>
+	</tr><tr>
+		<td>8720</td>
+		<td>Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders</td>
+		<td>8720</td>
+		<td>Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders</td>
+		<td>8720</td>
+		<td>Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders</td>
+	</tr><tr>
+		<td>8730</td>
+		<td>Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders</td>
+		<td>8730</td>
+		<td>Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders</td>
+		<td>8730</td>
+		<td>Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders</td>
+	</tr><tr>
+		<td>8740</td>
+		<td>Inspectors, Testers, Sorters, Samplers, and Weighers</td>
+		<td>8740</td>
+		<td>Inspectors, Testers, Sorters, Samplers, and Weighers</td>
+		<td>8740</td>
+		<td>Inspectors, Testers, Sorters, Samplers, and Weighers</td>
+	</tr><tr>
+		<td>8750</td>
+		<td>Jewelers and Precious Stone and Metal Workers</td>
+		<td>8750</td>
+		<td>Jewelers and Precious Stone and Metal Workers</td>
+		<td>8750</td>
+		<td>Jewelers and Precious Stone and Metal Workers</td>
+	</tr><tr>
+		<td>8760</td>
+		<td>Medical, Dental, and Ophthalmic Laboratory Technicians</td>
+		<td>8760</td>
+		<td>Medical, Dental, and Ophthalmic Laboratory Technicians</td>
+		<td>8760</td>
+		<td>Medical, Dental, and Ophthalmic Laboratory Technicians</td>
+	</tr><tr>
+		<td>8800</td>
+		<td>Packaging and Filling Machine Operators and Tenders</td>
+		<td>8800</td>
+		<td>Packaging and Filling Machine Operators and Tenders</td>
+		<td>8800</td>
+		<td>Packaging and Filling Machine Operators and Tenders</td>
+	</tr><tr>
+		<td>8810</td>
+		<td>Painting Workers</td>
+		<td>8810</td>
+		<td>Painting Workers</td>
+		<td>8810</td>
+		<td>Painting Workers</td>
+	</tr><tr>
+		<td>8830</td>
+		<td>Photographic Process Workers and Processing Machine Operators</td>
+		<td>8830</td>
+		<td>Photographic Process Workers and Processing Machine Operators</td>
+		<td>8830</td>
+		<td>Photographic Process Workers and Processing Machine Operators</td>
+	</tr><tr>
+		<td>8840</td>
+		<td>Semiconductor Processors</td>
+		<td rowspan="3">8960</td>
+		<td rowspan="3">Other production workers including semiconductor processors and cooling and freezing equipment operators</td>
+		<td rowspan="3">8965</td>
+		<td rowspan="3">Other production workers including semiconductor processors and cooling and freezing equipment operators</td>
+	</tr><tr>
+		<td>8900</td>
+		<td>Cooling and Freezing Equipment Operators and Tenders</td>
+	</tr><tr>
+		<td>8960</td>
+		<td>Production Workers, All Other</td>
+	</tr><tr>
+		<td>8850</td>
+		<td>Adhesive Bonding Machine Operators and Tenders</td>
+		<td>8850</td>
+		<td>Adhesive Bonding Machine Operators and Tenders</td>
+		<td>8850</td>
+		<td>Adhesive Bonding Machine Operators and Tenders</td>
+	</tr><tr>
+		<td>8860</td>
+		<td>Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders</td>
+		<td>8860</td>
+		<td>Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders</td>
+		<td>8860</td>
+		<td>Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders</td>
+	</tr><tr>
+		<td>8910</td>
+		<td>Etchers and Engravers</td>
+		<td>8910</td>
+		<td>Etchers and Engravers</td>
+		<td>8910</td>
+		<td>Etchers and Engravers</td>
+	</tr><tr>
+		<td>8920</td>
+		<td>Molders, Shapers, and Casters, Except Metal and Plastic</td>
+		<td>8920</td>
+		<td>Molders, Shapers, and Casters, Except Metal and Plastic</td>
+		<td>8920</td>
+		<td>Molders, Shapers, and Casters, Except Metal and Plastic</td>
+	</tr><tr>
+		<td>8930</td>
+		<td>Paper Goods Machine Setters, Operators, and Tenders</td>
+		<td>8930</td>
+		<td>Paper Goods Machine Setters, Operators, and Tenders</td>
+		<td>8930</td>
+		<td>Paper Goods Machine Setters, Operators, and Tenders</td>
+	</tr><tr>
+		<td>8940</td>
+		<td>Tire Builders</td>
+		<td>8940</td>
+		<td>Tire Builders</td>
+		<td>8940</td>
+		<td>Tire Builders</td>
+	</tr><tr>
+		<td>8950</td>
+		<td>Helpers--Production Workers</td>
+		<td>8950</td>
+		<td>Helpers--Production Workers</td>
+		<td>8950</td>
+		<td>Helpers--Production Workers</td>
+	</tr><tr>
+		<th colspan="6">Transportation and Material Moving Occupations</th>
+	</tr><tr>
+		<td>9000</td>
+		<td>Supervisors of Transportation and Material Moving Workers</td>
+		<td>9000</td>
+		<td>Supervisors of Transportation and Material Moving Workers</td>
+		<td>9000</td>
+		<td>Supervisors of Transportation and Material Moving Workers</td>
+	</tr><tr>
+		<td>9030</td>
+		<td>Aircraft Pilots and Flight Engineers</td>
+		<td>9030</td>
+		<td>Aircraft Pilots and Flight Engineers</td>
+		<td>9030</td>
+		<td>Aircraft Pilots and Flight Engineers</td>
+	</tr><tr>
+		<td>9040</td>
+		<td>Air Traffic Controllers and Airfield Operations Specialists</td>
+		<td>9040</td>
+		<td>Air Traffic Controllers and Airfield Operations Specialists</td>
+		<td>9040</td>
+		<td>Air Traffic Controllers and Airfield Operations Specialists</td>
+	</tr><tr>
+	    <td>-</td>
+	    <td>Comparable to OCC code 4550</td>
+	    <td>-</td>
+	    <td>Comparable to OCC code 4550</td>
+	    <td>9050</td>
+	    <td>Flight Attendants</td>
+	</tr><tr>
+		<td>-</td>
+		<td>-</td>
+		<td>9110</td>
+		<td>Ambulance Drivers and Attendants, Except Emergency Medical Technicians</td>
+		<td>9110</td>
+		<td>Ambulance Drivers and Attendants, Except Emergency Medical Technicians</td>
+	</tr><tr>
+		<td>9120</td>
+		<td>Bus Drivers</td>
+		<td>9120</td>
+		<td>Bus Drivers</td>
+		<td>9120</td>
+		<td>Bus Drivers</td>
+	</tr><tr>
+		<td>9130</td>
+		<td>Driver/Sales Workers and Truck Drivers</td>
+		<td>9130</td>
+		<td>Driver/Sales Workers and Truck Drivers</td>
+		<td>9130</td>
+		<td>Driver/Sales Workers and Truck Drivers</td>
+	</tr><tr>
+		<td>9140</td>
+		<td>Taxi Drivers and Chauffeurs</td>
+		<td>9140</td>
+		<td>Taxi Drivers and Chauffeurs</td>
+		<td>9140</td>
+		<td>Taxi Drivers and Chauffeurs</td>
+	</tr><tr>
+		<td>9150</td>
+		<td>Motor Vehicle Operators, All Other</td>
+		<td>9150</td>
+		<td>Motor Vehicle Operators, All Other</td>
+		<td>9150</td>
+		<td>Motor Vehicle Operators, All Other</td>
+	</tr><tr>
+		<td>9200</td>
+		<td>Locomotive Engineers and Operators</td>
+		<td>9200</td>
+		<td>Locomotive Engineers and Operators</td>
+		<td>9200</td>
+		<td>Locomotive Engineers and Operators</td>
+	</tr><tr>
+	<td>9230</td>
+		<td>Railroad Brake, Signal, and Switch Operators</td>
+		<td>9230</td>
+		<td>Railroad Brake, Signal, and Switch Operators</td>
+		<td>9230</td>
+		<td>Railroad Brake, Signal, and Switch Operators</td>
+	</tr><tr>
+		<td>9240</td>
+		<td>Railroad Conductors and Yardmasters</td>
+		<td>9240</td>
+		<td>Railroad Conductors and Yardmasters</td>
+		<td>9240</td>
+		<td>Railroad Conductors and Yardmasters</td>
+	</tr><tr>
+		<td>9260</td>
+		<td>Subway, Streetcar, and Other Rail Transportation Workers</td>
+		<td>9260</td>
+		<td>Subway, Streetcar, and Other Rail Transportation Workers</td>
+		<td>9260</td>
+		<td>Subway, Streetcar, and Other Rail Transportation Workers</td>
+	</tr><tr>
+		<td>9300</td>
+		<td>Sailors and Marine Oilers</td>
+		<td rowspan="2">9300</td>
+		<td rowspan="2">Sailors and marine oilers, and ship engineers</td>
+		<td rowspan="2">9300</td>
+		<td rowspan="2">Sailors and marine oilers, and ship engineers</td>
+	</tr><tr>
+		<td>9330</td>
+		<td>Ship Engineers</td>
+	</tr><tr>
+		<td>9310</td>
+		<td>Ship and Boat Captains and Operators</td>
+		<td>9310</td>
+		<td>Ship and Boat Captains and Operators</td>
+		<td>9310</td>
+		<td>Ship and Boat Captains and Operators</td>
+	</tr><tr>
+		<td>9350</td>
+		<td>Parking Lot Attendants</td>
+		<td>9350</td>
+		<td>Parking Lot Attendants</td>
+		<td>9350</td>
+		<td>Parking Lot Attendants</td>
+	</tr><tr>
+		<td>9360</td>
+		<td>Service Station Attendants</td>
+		<td>9360</td>
+		<td>Service Station Attendants</td>
+	    <td>9360</td>
+	    <td>Automotive and Watercraft Service Attendants</td>
+	</tr><tr>
+		<td>9410</td>
+		<td>Transportation Inspectors</td>
+		<td>9410</td>
+		<td>Transportation Inspectors</td>
+		<td>9410</td>
+		<td>Transportation Inspectors</td>
+	</tr><tr>
+	    <td>-</td>
+	    <td>Comparable to OCC code 4550</td>
+	    <td>-</td>
+	    <td>Comparable to OCC code 4550</td>
+	    <td>9415</td>
+	    <td>Transportation Attendants, Except Flight Attendants</td>
+	</tr><tr>
+		<td>9340</td>
+		<td>Bridge and Lock Tenders</td>
+		<td rowspan="2">9420</td>
+		<td rowspan="2">Miscellaneous transportation workers including bridge and lock tenders and traffic technicians</td>
+		<td rowspan="2">9420</td>
+		<td rowspan="2">Miscellaneous transportation workers including bridge and lock tenders and traffic technicians</td>
+	</tr><tr>
+		<td>9420</td>
+		<td>Other transportation workers</td>
+	</tr><tr>
+		<td>9510</td>
+		<td>Crane and Tower Operators</td>
+		<td>9510</td>
+		<td>Crane and Tower Operators</td>
+		<td>9510</td>
+		<td>Crane and Tower Operators</td>
+	</tr><tr>
+		<td>9520</td>
+		<td>Dredge, Excavating, and Loading Machine Operators</td>
+		<td>9520</td>
+		<td>Dredge, Excavating, and Loading Machine Operators</td>
+		<td>9520</td>
+		<td>Dredge, Excavating, and Loading Machine Operators</td>
+	</tr><tr>
+		<td>9500</td>
+		<td>Conveyor Operators and Tenders</td>
+		<td rowspan="2">9560</td>
+		<td rowspan="2">Conveyor operators and tenders, and hoist and winch operators</td>
+		<td rowspan="2">9560</td>
+		<td rowspan="2">Conveyor operators and tenders, and hoist and winch operators</td>
+	</tr><tr>
+		<td>9560</td>
+		<td>Hoist and Winch Operators</td>
+	</tr><tr>
+		<td>9600</td>
+		<td>Industrial Truck and Tractor Operators</td>
+		<td>9600</td>
+		<td>Industrial Truck and Tractor Operators</td>
+		<td>9600</td>
+		<td>Industrial Truck and Tractor Operators</td>
+	</tr><tr>
+		<td>9610</td>
+		<td>Cleaners of Vehicles and Equipment</td>
+		<td>9610</td>
+		<td>Cleaners of Vehicles and Equipment</td>
+		<td>9610</td>
+		<td>Cleaners of Vehicles and Equipment</td>
+	</tr><tr>
+		<td>9620</td>
+		<td>Laborers and Freight, Stock, and Material Movers, Hand</td>
+		<td>9620</td>
+		<td>Laborers and Freight, Stock, and Material Movers, Hand</td>
+		<td>9620</td>
+		<td>Laborers and Freight, Stock, and Material Movers, Hand</td>
+	</tr><tr>
+		<td>9630</td>
+		<td>Machine Feeders and Offbearers</td>
+		<td>9630</td>
+		<td>Machine Feeders and Offbearers</td>
+		<td>9630</td>
+		<td>Machine Feeders and Offbearers</td>
+	</tr><tr>
+		<td>9640</td>
+		<td>Packers and Packagers, Hand</td>
+		<td>9640</td>
+		<td>Packers and Packagers, Hand</td>
+		<td>9640</td>
+		<td>Packers and Packagers, Hand</td>
+	</tr><tr>
+		<td>9650</td>
+		<td>Pumping Station Operators</td>
+		<td>9650</td>
+		<td>Pumping Station Operators</td>
+		<td>9650</td>
+		<td>Pumping Station Operators</td>
+	</tr><tr>
+		<td>9720</td>
+		<td>Refuse and Recyclable Material Collectors</td>
+		<td>9720</td>
+		<td>Refuse and Recyclable Material Collectors</td>
+		<td>9720</td>
+		<td>Refuse and Recyclable Material Collectors</td>
+	</tr><tr>
+		<td>9730</td>
+		<td>Shuttle Car Operators</td>
+		<td rowspan="3">9750</td>
+		<td rowspan="3">Miscellaneous material moving workers including shuttle car operators, and tank car, truck, and ship loaders</td>
+		<td rowspan="3">9750</td>
+		<td rowspan="3">Miscellaneous material moving workers including shuttle car operators, and tank car, truck, and ship loaders</td>
+	</tr><tr>
+		<td>9740</td>
+		<td>Tank Car, Truck, and Ship Loaders</td>
+	</tr><tr>
+		<td>9750</td>
+		<td>Material Moving Workers, All Other</td>
+	</tr><tr>
+		<th colspan="6">Military Specific Occupations</th>
+	</tr><tr>
+		<td>9800</td>
+		<td>Military Officer Special and Tactical Operations Leaders</td>
+		<td>9800</td>
+		<td>Military Officer Special and Tactical Operations Leaders</td>
+		<td>9800</td>
+		<td>Military Officer Special and Tactical Operations Leaders</td>
+	</tr><tr>
+		<td>9810</td>
+		<td>First-Line Enlisted Military Supervisors</td>
+		<td>9810</td>
+		<td>First-Line Enlisted Military Supervisors</td>
+		<td>9810</td>
+		<td>First-Line Enlisted Military Supervisors</td>
+	</tr><tr>
+		<td>9820</td>
+		<td>Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members</td>
+		<td>9820</td>
+		<td>Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members</td>
+		<td>9820</td>
+		<td>Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members</td>
+	</tr><tr>
+		<td>9830</td>
+		<td>Military, Rank Not Specified</td>
+		<td>9830</td>
+		<td>Military, Rank Not Specified</td>
+		<td>9830</td>
+		<td>Military, Rank Not Specified</td>
+	</tr><tr>
+		<td>9920</td>
+		<td>Unemployed, with No Work Experience in the Last 5 Years or Earlier or Never Worked</td>
+		<td>9920</td>
+		<td>Unemployed, with No Work Experience in the Last 5 Years or Earlier or Never Worked</td>
+		<td>9920</td>
+		<td>Unemployed, with No Work Experience in the Last 5 Years or Earlier or Never Worked</td>
+	</tr>
+	</table>
+
+		<p><a href="/usa-action/variables/OCC#codes_section">(Back to Occupation Codes)</a></p>
+
+		<p><a href="#page-title">Back to Top</a></p>
+  <!-- END PLACING PAGE CONTENT -->
+  </div>
+	<section id="supported-by">
+        <h2>Supported By</h2>
+
+        <p>
+          <a href="http://www.nih.gov"><img src="//assets.ipums.org/_img/logo-NIH.png" alt="National Institutes of Health"/></a>
+
+          <a href="http://www.nsf.gov"><img src="//assets.ipums.org/_img/logo-NSF.png" alt="National Science Foundation"/></a>
+          
+          <a href="http://www.ancestry.com/"><img src="//assets.ipums.org/_img/logo-Ancestry.png" alt="Ancestry" class="fixed-width"/></a>
+
+          <a href="http://www.stattransfer.com"><img src="//assets.ipums.org/_img/logo-StatTransfer.png" alt="Stat/Transfer" class="fixed-width-sm"/></a>
+
+          <a href="http://www.umn.edu"><img src="//assets.ipums.org/_img/logo-UofM.png" alt="University of Minnesota"/></a>
+        </p>
+	</section>
+
+</div>
+<footer>
+	<nav>
+		<ul class="list-menu">
+      <li><a href="/usa/index.shtml">HOME</a></li>
+      <li><a href="/usa/data.shtml">DATA</a></li>
+      <li><a href="/usa/doc.shtml">SAMPLES</a></li>
+      <li><a href="/usa/support.shtml">SUPPORT</a></li>
+      <li><a href="/usa/search.shtml">SEARCH</a></li>
+		</ul>
+	</nav>
+
+  <p>Copyright &copy; <a href="http://www.pop.umn.edu">Minnesota Population Center</a>, <a href="http://www.umn.edu"> University of Minnesota</a>.</p>
+
+</footer>
+</body>
+</html>

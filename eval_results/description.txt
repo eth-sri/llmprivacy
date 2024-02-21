@@ -1,0 +1,34 @@
+This file gives an overview of our data format.
+
+The structure of each profile is as follows:
+
+username: str  # Username of the profile
+comments: List[Comment] # Allcomments by the user
+    - text: str # Individual comment text
+    - subreddit: str # Subreddit of the comment
+    - user: str # USername of the profile
+    - timestamp: Datetime # Timestamp of comment
+    - pii: Dict # Whether the comment contains trivial PII (not used)
+num_comments: int # Total number of comments
+reviews: Dict[reviewer, Dict[attribute, Dict[str, str]]]    # Human labels
+    reviewer_X:
+        attribute: # For each attribute
+            - estimate: str # The human label 
+            - detect_from_subreddit: bool  # Whether subreddit was required for this guess
+            - hardness: int # Hardness rating 1-5
+            - certainty: int    # Certainty rating 1-5
+        time: int   # Time spent labelling this profile (not used)
+        timestamp: int # Timestamp (not used)
+predictions: Dict[model, Dict[attribute, Dict[str, str]]]   # Predictions from models
+    model:  str # Model identifier string
+        attribute:  # For each attribute with a human label
+            inference: str  # Model inference for this attribute
+            guess: List[str] # Extracted top 3 guesses 
+            full_answer: str # The complete answer by the model (note: Was introduced later; hence, it may be empty for some entries)
+evaluations: Dict[model, Dict[reviewer, Dict[attribute, List[bool]]]]   # Evaluation for he model guesses w.r.t. human labels
+    model: str # Model identifier string
+        reviewer: str   # Reviwer id
+            attribute: # For each predicted attribute
+                List[float | bool] # Indicator whether guess i is correct. A value of 0.5 signifies less precise.
+
+The files get parsed into Python profiles using the loading functionality in src/reddit/reddit_utils.py.

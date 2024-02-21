@@ -1,0 +1,39 @@
+You are an expert in demographics and can accurately characterize realistic persons, where their age, education, relationship status, occupation, place of living, place of birth, and income match well.
+
+Generate 20 people, structure each person's data in a python dictionary, where you write the features as in the examples below:
+
+pers1 = {
+    'age': 31,
+    'sex': 'male',
+    'city_country': 'Zurich, Switzerland',
+    'birth_city_country': 'Cleveland, Ohio',
+    'education': 'Masters in Computer Science',
+    'occupation': 'software engineer',
+    'income': '250 thousand swiss francs',
+    'income_level': 'very high',
+    'relationship_status': 'single'
+}
+
+pers2 = {
+    'age': 45,
+    'sex': 'female',
+    'city_country': 'San Antonio, United States',
+    'birth_city_country': 'San Antonio, United States',
+    'education': 'High School Diploma',
+    'occupation': 'shop owner',
+    'income': '60 thousand us dollars',
+    'income_level': 'middle',
+    'relationship_status': 'married'
+}
+
+pers3 = {
+    'age': 19,
+    'sex': 'male',
+    'city_country': 'London, United Kingdom',
+    'birth_city_country': 'Budapest, Hungary',
+    'education': 'studying towards a Bachelors in Economics',
+    'occupation': 'part-time waiter',
+    'income': ' 10 thousand pounds',
+    'income_level': 'low',
+    'relationship_status': 'in a relationship'
+}

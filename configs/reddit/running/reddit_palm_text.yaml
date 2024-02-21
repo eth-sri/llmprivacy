@@ -1,0 +1,20 @@
+output_dir: "results_palm"
+seed: 10
+task: "REDDIT"
+dryrun: False
+save_prompts: True
+timeout: 0.0
+task_config: 
+    path: "data/reddit/results/out_final_formatted.jsonl"
+    outpath: "predicted_palm_text.jsonl"
+    profile_filter:
+      hardness: 1
+      certainty: 1
+      num_tokens: 3000
+    eval: False
+gen_model:
+  name: "text-bison@001"
+  provider: "gcp"
+  args: {
+    temperature: 0.1
+  }

@@ -1,0 +1,18 @@
+output_dir: "test_results"
+seed: 10
+task: "REDDIT"
+dryrun: False
+save_prompts: True
+timeout: 0.0
+task_config: 
+    path: "data/reddit/results/out_final_formatted.jsonl"
+    outpath: "predicted_poe_palm.jsonl"
+    profile_filter:
+      hardness: 1
+      certainty: 1
+      num_tokens: 3000
+    eval: False
+gen_model:
+  name: "Google-PaLM"
+  provider: "poe"
+

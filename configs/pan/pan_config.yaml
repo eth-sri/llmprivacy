@@ -1,0 +1,17 @@
+
+output_dir: "results"
+seed: 42
+task: "PAN"
+dryrun: False
+save_prompts: False
+timeout: 0.0
+task_config: 
+    data_dir: "data/pan/2018"
+    split: "train"
+    anonymizer: "none"
+    total_queries: 1900
+    subsample: 0
+gen_model: 
+  name: "gpt-4"
+  provider: "openai"
+  args: {}

@@ -1,0 +1,23 @@
+output_dir: "chat_results"  # Set your output directory in case you dont log to console
+store: True # Set to True if you want to store the results in a file in the output directory (see above)
+seed: 42
+task: "CHAT_EVAL"
+dryrun: False # Not relevant
+save_prompts: True  # Not relevant
+timeout: 0.0 # Not relevant
+gen_model: # ignored
+  name: "gpt-4"
+  provider: "openai"
+  args: {
+    temperature: 1.
+  }
+task_config: 
+    chat_path_prefix: "chat_results/CHAT/gpt-4-gpt-4/42/location_age_sex/hash_3c8ba7a1"
+    use_model_aid: True
+    end: 17
+    evaluation_model:
+      name: "gpt-4"
+      provider: "openai"
+      args: {
+        temperature: 0.0
+      }

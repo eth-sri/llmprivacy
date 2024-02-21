@@ -1,0 +1,18 @@
+output_dir: "results/evaluate"
+seed: 10
+task: "REDDIT"
+dryrun: False
+save_prompts: True
+timeout: 0.0
+store: True
+task_config: 
+    path: "reddit_predicted/predicted_gpt4_anonymized_hard_04.jsonl"
+    outpath: "eval_results/gpt_4_anonymized_hard_04.jsonl"
+    eval: True
+    decider: "model"
+gen_model:
+  name: "gpt-4"
+  provider: "openai"
+  args: {
+    temperature: 0.1
+  }

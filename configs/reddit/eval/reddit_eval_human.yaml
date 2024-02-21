@@ -1,0 +1,18 @@
+output_dir: "results/evaluate"
+seed: 10
+task: "REDDIT"
+dryrun: False
+save_prompts: True
+timeout: 0.0
+store: False
+task_config: 
+    path: "reddit_predicted/final/merged_full.jsonl"
+    outpath: "eval_results/full_eval_model_human.jsonl"
+    eval: True
+    decider: "model_human"
+gen_model:
+  name: "gpt-4"
+  provider: "openai"
+  args: {
+    temperature: 0.1
+  }

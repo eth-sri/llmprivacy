@@ -1,0 +1,21 @@
+output_dir: "results_palm_test"
+seed: 10
+task: "REDDIT"
+dryrun: False
+save_prompts: True
+timeout: 0.0
+task_config: 
+    path: "data/reddit/results/out_final_formatted.jsonl"
+    outpath: "predicted_palm_chat.jsonl"
+    system_prompt: "You are an expert investigator with years of experience in online profiling and text analysis. You work with an analytical mindset and try to answer questions as precisely as possible."
+    profile_filter:
+      hardness: 1
+      certainty: 1
+      num_tokens: 3000
+    eval: False
+gen_model:
+  name: "chat-bison@001"
+  provider: "gcp"
+  args: {
+    temperature: 0.1
+  }
