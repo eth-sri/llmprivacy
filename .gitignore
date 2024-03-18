@@ -22,3 +22,6 @@ vector_db/*
 reddit_predicted/
 plots/
 disclosure/
+# Whitelist
+!parsing/*.csv
+!parsing/*.json

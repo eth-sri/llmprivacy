@@ -1,0 +1,225 @@
+001,Alabama/AL
+002,Alaska/AK
+004,Arizona/AZ
+005,Arkansas/AR
+006,California/CA
+008,Colorado/CO
+009,Connecticut/CT
+010,Delaware/DE
+011,District of Columbia/DC
+012,Florida/FL
+013,Georgia/GA
+015,Hawaii/HI
+016,Idaho/ID
+017,Illinois/IL
+018,Indiana/IN
+019,Iowa/IA
+020,Kansas/KS
+021,Kentucky/KY
+022,Louisiana/LA
+023,Maine/ME
+024,Maryland/MD
+025,Massachusetts/MA
+026,Michigan/MI
+027,Minnesota/MN
+028,Mississippi/MS
+029,Missouri/MO
+030,Montana/MT
+031,Nebraska/NE
+032,Nevada/NV
+033,New Hampshire/NH
+034,New Jersey/NJ
+035,New Mexico/NM
+036,New York/NY
+037,North Carolina/NC
+038,North Dakota/ND
+039,Ohio/OH
+040,Oklahoma/OK
+041,Oregon/OR
+042,Pennsylvania/PA
+044,Rhode Island/RI
+045,South Carolina/SC
+046,South Dakota/SD
+047,Tennessee/TN
+048,Texas/TX
+049,Utah/UT
+050,Vermont/VT
+051,Virginia/VA
+053,Washington/WA
+054,West Virginia/WV
+055,Wisconsin/WI
+056,Wyoming/WY
+060,American Samoa
+066,Guam
+069,Commonwealth of the Northern Mariana Islands
+072,Puerto Rico
+078,US Virgin Islands
+100,Albania
+102,Austria
+103,Belgium
+104,Bulgaria
+105,Czechoslovakia
+106,Denmark
+108,Finland
+109,France
+110,Germany
+116,Greece
+117,Hungary
+118,Iceland
+119,Ireland
+120,Italy
+126,Netherlands
+127,Norway
+128,Poland
+129,Portugal
+130,Azores Islands
+132,Romania
+134,Spain
+136,Sweden
+137,Switzerland
+138,United Kingdom
+139,England
+140,Scotland
+142,Northern Ireland
+147,Yugoslavia
+148,Czech Republic
+149,Slovakia
+150,Bosnia and Herzegovina
+151,Croatia
+152,Macedonia
+154,Serbia
+156,Latvia
+157,Lithuania
+158,Armenia
+159,Azerbaijan
+160,Belarus
+161,Georgia
+162,Moldova
+163,Russia
+164,Ukraine
+165,USSR
+166,Europe
+167,Kosovo
+168,Montenegro
+169,Other Europe
+200,Afghanistan
+202,Bangladesh
+203,Bhutan
+205,Myanmar
+206,Cambodia
+207,China
+208,Cyprus
+209,Hong Kong
+210,India
+211,Indonesia
+212,Iran
+213,Iraq
+214,Israel
+215,Japan
+216,Jordan
+217,Korea
+218,Kazakhstan
+219,Kyrgyzstan
+222,Kuwait
+223,Laos
+224,Lebanon
+226,Malaysia
+228,Mongolia
+229,Nepal
+231,Pakistan
+233,Philippines
+235,Saudi Arabia
+236,Singapore
+238,Sri Lanka
+239,Syria
+240,Taiwan
+242,Thailand
+243,Turkey
+245,United Arab Emirates
+246,Uzbekistan
+247,Vietnam
+248,Yemen
+249,Asia
+253,South Central Asia
+254,Other Asia
+300,Bermuda
+301,Canada
+303,Mexico
+310,Belize
+311,Costa Rica
+312,El Salvador
+313,Guatemala
+314,Honduras
+315,Nicaragua
+316,Panama
+321,Antigua and Barbuda
+323,Bahamas
+324,Barbados
+327,Cuba
+328,Dominica
+329,Dominican Republic
+330,Grenada
+332,Haiti
+333,Jamaica
+338,St. Kitts-Nevis
+339,St. Lucia
+340,St. Vincent and the Grenadines
+341,Trinidad and Tobago
+343,West Indies
+344,Caribbean
+360,Argentina
+361,Bolivia
+362,Brazil
+363,Chile
+364,Colombia
+365,Ecuador
+368,Guyana
+369,Paraguay
+370,Peru
+372,Uruguay
+373,Venezuela
+374,South America
+399,Americas
+400,Algeria
+407,Cameroon
+408,Cabo Verde
+412,Congo
+414,Egypt
+416,Ethiopia
+417,Eritrea
+420,Gambia
+421,Ghana
+423,Guinea
+425,Ivory Coast
+427,Kenya
+429,Liberia
+430,Libya
+436,Morocco
+440,Nigeria
+442,Rwanda
+444,Senegal
+447,Sierra Leone
+448,Somalia
+449,South Africa
+451,Sudan
+453,Tanzania
+454,Togo
+456,Tunisi
+457,Uganda
+459,Democratic Republic of Congo (Zaire)
+460,Zambia
+461,Zimbabwe
+462,Africa
+463,South Sudan
+464,Northern Africa
+467,Western Africa
+468,Other Africa
+469,Eastern Africa
+501,Australia
+508,Fiji
+511,Marshall Islands
+512,Micronesia
+515,New Zealand
+523,Tonga
+527,Samoa
+554,Other US Island Areas or Oceania
