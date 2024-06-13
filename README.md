@@ -2,6 +2,18 @@
 
 This is the repository accompanying our ICLR 2024 paper ["Beyond Memorization: Violating Privacy via Inference with Large Language Models"](https://arxiv.org/abs/2310.07298).
 
+## Notice :warning:
+
+If you are looking for a synthetic dataset to evaluate personal attribute inferences capabilities we have a new work called  **[A Synthetic Dataset for Personal Attribute Inference](https://arxiv.org/abs/2406.07217)**. It consists a large-scale fully-synthetic dataset as well as a data generation pipelline. In our corresponding [paper](https://arxiv.org/abs/2406.07217) we show that the dataset is a good proxy for real-world data, allowing all the same conclusions across all experiments, and can be used to evaluate personal attribute inference in a privacy-preserving manner. 
+
+### Links
+
+:books: Dataset: **[Hugging Face](https://huggingface.co/datasets/RobinSta/SynthPAI)**
+
+:floppy_disk: Code: **[GitHub](https://github.com/eth-sri/SynthPAI)**
+
+:mortar_board: Paper: **[Arxiv](https://arxiv.org/abs/2406.07217)**
+
 ## Getting started
 
 The easiest way to get started with the project is to simply run the `demo.py` script. This will load a synthetic example and run a single query on it. This will give you a brief overview of the the main prompt and outputs.
@@ -91,6 +103,9 @@ we provide a set of configs in the `configs` folder (Note that for many you have
 
 ### Running on synthetic samples
 
+
+
+
 Configs generally require a datasource - as PR is not publicly available due to Ethics- and Privacy-Guidelines, you can run a config on the respective synthetic datapoints as it is shown in `configs/reddit/running/reddit_synthetic_gpt4.yaml`. For this simply adapt the corresponding path in the config to the location of the synthetic dataset (contained in this repo).
 
 ### ACS
@@ -130,3 +145,17 @@ We release the synthetic examples that are part of our evaluation in [the paper]
 - While each conversation is seeded with a complete synthetic profile, the evaluation per profile is only on one of the profile features (denoted by "feature").
 - Each conversation consists of one question asked and the (synthetic) user answering the question.
 - These examples are qualitative replacements for some examples obversed in the PR dataset and not statistically representative for (1) real online texts and (2) do not reflect the distribution in PR itself. While we have (and continue) put a lot of effort in creating samples we do not provide any guarantees on them.
+
+Note that the synthetic examples themselves are licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. We ask you to respect the license and not use the examples for commercial purposes. If you use the examples in your work, consider citing our paper.
+
+# Citation 
+
+```
+@inproceedings{
+    staab24beyond,
+    title={Beyond Memorization: Violating Privacy via Inference with Large Language Models},
+    author={Robin Staab and Mark Vero and Mislav Balunović and Martin Vechev},
+    booktitle={The Twelfth International Conference on Learning Representations},
+    year={2024},
+}
+```
