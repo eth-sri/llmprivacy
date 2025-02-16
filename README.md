@@ -4,7 +4,7 @@ This is the repository accompanying our ICLR 2024 paper ["Beyond Memorization: V
 
 ## Notice :warning:
 
-If you are looking for a synthetic dataset to evaluate personal attribute inferences capabilities we have a new work called  **[A Synthetic Dataset for Personal Attribute Inference](https://arxiv.org/abs/2406.07217)**. It consists a large-scale fully-synthetic dataset as well as a data generation pipelline. In our corresponding [paper](https://arxiv.org/abs/2406.07217) we show that the dataset is a good proxy for real-world data, allowing all the same conclusions across all experiments, and can be used to evaluate personal attribute inference in a privacy-preserving manner. 
+If you are looking for a synthetic dataset to evaluate personal attribute inferences capabilities we have a new work called  **[A Synthetic Dataset for Personal Attribute Inference](https://arxiv.org/abs/2406.07217)** (NeurIPS 2024 D&B). It consists of a large-scale fully-synthetic dataset as well as a data generation pipeline. In our corresponding [paper](https://arxiv.org/abs/2406.07217) we show that the dataset is a good proxy for real-world data, allowing all the same conclusions across all experiments, and can be used to evaluate personal attribute inference in a privacy-preserving manner. 
 
 ### Links
 
@@ -13,6 +13,13 @@ If you are looking for a synthetic dataset to evaluate personal attribute infere
 :floppy_disk: Code: **[GitHub](https://github.com/eth-sri/SynthPAI)**
 
 :mortar_board: Paper: **[Arxiv](https://arxiv.org/abs/2406.07217)**
+
+## Follow-ups
+
+In addition to the synthetic dataset referred to above, we have two further works extending over this paper:
+
+- **[Private Attribute Inference from Images with Vision-Language Models](https://arxiv.org/abs/2404.10618)** (NeurIPS 2024)**:** We test the privacy inference capabilities of Large Multimodal Models on unassuming images, and find that internet users reveal vast amounts of private information about themselves even in pictures that do not contain depictions of persons. 💾 [Code](https://github.com/eth-sri/privacy-inference-multimodal)
+- **[Language Models are Advanced Anonymizers](https://arxiv.org/abs/2402.13846)** (ICLR 2025)**:** We show that current anonymization tools and metrics are fundamentally misaligned with the de-anonymization capabilities of modern LLMs. Then, we propose an adversarial anonymization framework in which LLMs iteratively anonymize text snippets against the inferences of a competing LLM, vastly outperforming industry-grade commercial anonymizers both in terms of retained text utility and privacy. 💾 [Code](https://github.com/eth-sri/llm-anonymization)
 
 ## Getting started
 
